@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2016/03/20/hexoIgnoreRenderReadme/</loc>
+    <lastmod>2016-03-20T07:36:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo在部署时忽略README文件的渲染</title>
+        <pubTime>2016-03-20T06:36:13.000Z</pubTime>
+        
+        <tag>Hexo </tag>
+         
+        <tag>小经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="HEXO" url="http://xiaolei0808.com/categories/HEXO/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/08/12/GitFork/</loc>
+    <lastmod>2016-03-19T14:16:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>与原作者同步Fork代码仓库</title>
+        <pubTime>2015-08-12T14:35:56.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://xiaolei0808.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/03/27/SwiftClosures/</loc>
+    <lastmod>2016-03-19T14:16:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Swift中的闭包(Closures)</title>
+        <pubTime>2015-03-27T02:52:48.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>学习 </tag>
+         
+        <tag>Swift </tag>
+         
+        <tag>闭包 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Swift" url="http://xiaolei0808.com/categories/Swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/02/SQLite&SQL/</loc>
+    <lastmod>2016-03-19T14:15:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>SQLite和SQL</title>
+        <pubTime>2015-04-02T03:00:31.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>学习 </tag>
+         
+        <tag>SQL </tag>
+         
+        <tag>SQLite </tag>
+         
+        <tag>数据库 </tag>
+         
+         
+           
+             
+              <breadCrumb title="SQL" url="http://xiaolei0808.com/categories/SQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/03/20/ToSelf/</loc>
+    <lastmod>2016-03-19T11:00:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>跟自己做个了断吧</title>
+        <pubTime>2015-03-20T11:45:43.000Z</pubTime>
+        
+        <tag>个人 </tag>
+         
+        <tag>情感 </tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://xiaolei0808.com/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/12/13/MacUpdateGit/</loc>
+    <lastmod>2015-12-12T17:07:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>Mac OS X 升级 Git</title>
+        <pubTime>2015-12-12T16:15:47.000Z</pubTime>
+        
+        <tag>Git </tag>
+         
+        <tag>小经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://xiaolei0808.com/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/09/25/RuntimeNavPop/</loc>
+    <lastmod>2015-09-25T14:43:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>利用Runtime自定义导航控制器返回手势</title>
+        <pubTime>2015-09-25T14:42:12.000Z</pubTime>
+        
+        <tag>经验 </tag>
+         
+        <tag>小技巧 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/09/22/Xcode7Fold/</loc>
+    <lastmod>2015-09-22T14:58:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode7代码折叠</title>
+        <pubTime>2015-09-22T14:56:13.000Z</pubTime>
+        
+        <tag>经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/09/16/DESIGNATED_INITIALIZER/</loc>
+    <lastmod>2015-09-16T15:30:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>指定初始化方法并使系统初始化方法无效</title>
+        <pubTime>2015-09-16T15:28:09.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+        <tag>经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/07/23/MapAPI/</loc>
+    <lastmod>2015-07-23T07:56:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>系统地图API位置提示搜索</title>
+        <pubTime>2015-07-23T07:29:55.000Z</pubTime>
+        
+        <tag>经验 </tag>
+         
+        <tag>小技巧 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/07/18/UIDisplaySearchController/</loc>
+    <lastmod>2015-07-17T17:19:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>纯代码创建UIDisplaySearchController遇到的问题</title>
+        <pubTime>2015-07-17T16:46:09.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+        <tag>经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/07/16/Xcode6-XSum/</loc>
+    <lastmod>2015-07-16T10:07:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode6.X手动安装低版本模拟器</title>
+        <pubTime>2015-07-16T09:17:52.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+        <tag>小技巧 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/07/14/NavBackItem/</loc>
+    <lastmod>2015-07-14T13:52:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>自定义导航栏的返回按钮标题</title>
+        <pubTime>2015-07-14T13:32:44.000Z</pubTime>
+        
+        <tag>小技巧 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/05/20/XcodePlugin/</loc>
+    <lastmod>2015-05-20T10:01:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode常用插件整理</title>
+        <pubTime>2015-05-20T09:02:47.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>插件 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/21/CocoaPods/</loc>
+    <lastmod>2015-04-21T09:22:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用CocoaPods管理第三方库</title>
+        <pubTime>2015-04-21T07:11:36.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>学习 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/08/DrawInRectWater/</loc>
+    <lastmod>2015-04-21T01:32:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>解决DrawInRect绘图不清晰的问题</title>
+        <pubTime>2015-04-08T10:46:44.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>学习 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/11/HexoFix/</loc>
+    <lastmod>2015-04-21T01:32:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo遇到的坑</title>
+        <pubTime>2015-04-11T03:37:52.000Z</pubTime>
+        
+        <tag>学习 </tag>
+         
+        <tag>Hexo </tag>
+         
+         
+           
+             
+              <breadCrumb title="经验" url="http://xiaolei0808.com/categories/%E7%BB%8F%E9%AA%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/14/iOSPush/</loc>
+    <lastmod>2015-04-21T01:31:33.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS中Push功能的实现</title>
+        <pubTime>2015-04-14T06:15:59.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>学习 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://xiaolei0808.com/2015/04/11/Traver-Qingtianhe/</loc>
+    <lastmod>2015-04-14T08:42:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>小游青天河</title>
+        <pubTime>2015-04-11T04:36:41.000Z</pubTime>
+        
+        <tag>个人 </tag>
+         
+        <tag>情感 </tag>
+         
+         
+           
+             
+              <breadCrumb title="生活" url="http://xiaolei0808.com/categories/%E7%94%9F%E6%B4%BB/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>
