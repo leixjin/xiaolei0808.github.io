@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="小经验,Hexo," />
+  <meta name="keywords" content="Hexo,小经验," />
 
 
 
@@ -67,7 +67,7 @@
 <meta property="og:site_name" content="Mr.King’s Blog">
 <meta property="og:description" content="闲言碎语已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~
 目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析">
-<meta property="og:updated_time" content="2016-03-20T07:02:27.000Z">
+<meta property="og:updated_time" content="2016-03-20T07:36:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo在部署时忽略README文件的渲染">
 <meta name="twitter:description" content="闲言碎语已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~
@@ -304,7 +304,8 @@
 
       
         <h3 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h3><p>已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~</p>
-<p>目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析到coding.net，国外解析到github.io。但是在DNSPod设置好了解析记录之后，只有用国外IP才能正常访问，国内IP一直提示DNS解析错误。检查了我的解析记录应该是没什么问题的，我用手机开4G流量访问是能够正常访问的。所以我怀疑是我家里的网络有什么限制(同一台电脑，没有改动SSH的配置，在公司能够正常使用SSH，在家里死活不能用SSH连接)，待我周一到公司再看一看。</p>
+<p>目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析到coding.net，国外解析到github.io。但是在DNSPod设置好了解析记录之后，只有用国外IP才能正常访问，国内IP一直提示DNS解析错误。检查了我的解析记录应该是没什么问题的，我用手机开4G流量访问是能够正常访问的。所以我怀疑是我家里的网络有什么限制(同一台电脑，没有改动SSH的配置，在公司能够正常使用SSH，在家里死活不能用SSH连接)，<del>待我周一到公司再看一看</del>原谅我的迫不及待，刚刚更新了本篇博文我就突然想到了问题所在，我家里使用的是小米路由器，之前为了加快网络解析，我手动设置了路由器的DNS解析服务器(114DNS和阿里DNS)，我把阿里DNS删除之后，全部改为了114DNS(114.114.114.114,114.114.115.115)，国内IP立马就可以访问了，阿里，泥煤啊！。OK，所有问题解决，下一步优化目标就是百度收录了。</p>
+<p><a href="https://www.114dns.com" target="_blank" rel="external">附上114DNS官网</a></p>
 <p>好像跑题了。。。下面进入正题。。。</p>
 <a id="more"></a>
 <h3 id="我是正题"><a href="#我是正题" class="headerlink" title="我是正题"></a>我是正题</h3><p>Hexo在渲染的时候是默认把source下所有的.md文件渲染成.html的，但是我不想把我的README.md文件给渲染了，该如何忽略单个文件的渲染呢?答案就是站点根目录下的_config.yml文件，这里可以做好多个性化的配置，我们只需要找到<code>skip_render</code>这个key,这个key对应的默认目录是source，所以我们只需要在这里把需要忽略的文件名写上就好，渲染的时候就会自动忽略这个文件的渲染。</p>
@@ -325,9 +326,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/小经验/" rel="tag">#小经验</a>
-          
             <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+          
+            <a href="/tags/小经验/" rel="tag">#小经验</a>
           
         </div>
       
