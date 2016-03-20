@@ -43,7 +43,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="小技巧," />
+  <meta name="keywords" content="小经验,Hexo," />
 
 
 
@@ -59,16 +59,19 @@
 
 
 
-<meta name="description" content="在iOS开发中，导航栏的定制是开发人员经常要做的事情，不过有的情况下，使用苹果官方自带的效果也很不错。苹果对导航栏的封装，让开发者省了不少事情。就比如说导航栏的返回按钮，它的标题会自动的显示为上一级控制器的title的内容，但是如果上一级的标题过长，它便会自动的变成“返回”两个字。有的时候，返回按钮的字太多也会影响美观，所以改变返回按钮的标题也是一种需求。但是如果你尝试着在当前控制器更改返回按钮的">
+<meta name="description" content="闲言碎语已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~
+目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义导航栏的返回按钮标题">
-<meta property="og:url" content="http://xiaolei0808.com/2015/07/14/NavBackItem/index.html">
+<meta property="og:title" content="Hexo在部署时忽略README文件的渲染">
+<meta property="og:url" content="http://xiaolei0808.com/2016/03/20/hexoIgnoreRenderReadme/index.html">
 <meta property="og:site_name" content="Mr.King’s Blog">
-<meta property="og:description" content="在iOS开发中，导航栏的定制是开发人员经常要做的事情，不过有的情况下，使用苹果官方自带的效果也很不错。苹果对导航栏的封装，让开发者省了不少事情。就比如说导航栏的返回按钮，它的标题会自动的显示为上一级控制器的title的内容，但是如果上一级的标题过长，它便会自动的变成“返回”两个字。有的时候，返回按钮的字太多也会影响美观，所以改变返回按钮的标题也是一种需求。但是如果你尝试着在当前控制器更改返回按钮的">
-<meta property="og:updated_time" content="2015-07-14T13:52:00.000Z">
+<meta property="og:description" content="闲言碎语已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~
+目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析">
+<meta property="og:updated_time" content="2016-03-20T07:02:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义导航栏的返回按钮标题">
-<meta name="twitter:description" content="在iOS开发中，导航栏的定制是开发人员经常要做的事情，不过有的情况下，使用苹果官方自带的效果也很不错。苹果对导航栏的封装，让开发者省了不少事情。就比如说导航栏的返回按钮，它的标题会自动的显示为上一级控制器的title的内容，但是如果上一级的标题过长，它便会自动的变成“返回”两个字。有的时候，返回按钮的字太多也会影响美观，所以改变返回按钮的标题也是一种需求。但是如果你尝试着在当前控制器更改返回按钮的">
+<meta name="twitter:title" content="Hexo在部署时忽略README文件的渲染">
+<meta name="twitter:description" content="闲言碎语已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~
+目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析">
 
 
 
@@ -86,7 +89,7 @@
   };
 </script>
 
-  <title> 自定义导航栏的返回按钮标题 | Mr.King’s Blog </title>
+  <title> Hexo在部署时忽略README文件的渲染 | Mr.King’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -235,7 +238,7 @@
             
             
               
-                自定义导航栏的返回按钮标题
+                Hexo在部署时忽略README文件的渲染
               
             
           </h1>
@@ -247,8 +250,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-14T21:32:44+08:00" content="2015-07-14">
-              2015-07-14
+            <time itemprop="dateCreated" datetime="2016-03-20T14:36:13+08:00" content="2016-03-20">
+              2016-03-20
             </time>
           </span>
 
@@ -261,8 +264,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/HEXO/" itemprop="url" rel="index">
+                    <span itemprop="name">HEXO</span>
                   </a>
                 </span>
 
@@ -277,8 +280,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/14/NavBackItem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/14/NavBackItem/" itemprop="commentsCount"></span>
+                <a href="/2016/03/20/hexoIgnoreRenderReadme/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/20/hexoIgnoreRenderReadme/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,14 +303,14 @@
       
 
       
-        <p>在iOS开发中，导航栏的定制是开发人员经常要做的事情，不过有的情况下，使用苹果官方自带的效果也很不错。苹果对导航栏的封装，让开发者省了不少事情。就比如说导航栏的返回按钮，它的标题会自动的显示为上一级控制器的<code>title</code>的内容，但是如果上一级的标题过长，它便会自动的变成“返回”两个字。有的时候，返回按钮的字太多也会影响美观，所以改变返回按钮的标题也是一种需求。但是如果你尝试着在当前控制器更改返回按钮的标题：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.navigationItem.backBarButtonItem.title = <span class="string">@"xxx"</span>;</span><br></pre></td></tr></table></figure>
-<p>你会发现，这样做并没有什么用。</p>
+        <h3 id="闲言碎语"><a href="#闲言碎语" class="headerlink" title="闲言碎语"></a>闲言碎语</h3><p>已经好久没有写博文了，主要是自己太懒，还有一个原因就是以前只有家里那台电脑能写。最近新申请的MacBookPro批下来了(不得不给老贾点个赞)，我就把Hexo环境搭建了起来，折腾了昨天一下午，更新到了最新版的Hexo（目前是3.2），把家里电脑的文件迁移了过来。终于能够躺床上继续折腾我的博客辣！原谅我的懒癌晚期吧~</p>
+<p>目前非常头疼的问题就是域名解析了，我想把域名按照不同访问来源解析，国内解析到coding.net，国外解析到github.io。但是在DNSPod设置好了解析记录之后，只有用国外IP才能正常访问，国内IP一直提示DNS解析错误。检查了我的解析记录应该是没什么问题的，我用手机开4G流量访问是能够正常访问的。所以我怀疑是我家里的网络有什么限制(同一台电脑，没有改动SSH的配置，在公司能够正常使用SSH，在家里死活不能用SSH连接)，待我周一到公司再看一看。</p>
+<p>好像跑题了。。。下面进入正题。。。</p>
 <a id="more"></a>
-<p>实际上，当前控制器的<code>backBarButtonItem</code>是需要在被push过来之前，在上级控制器中设置的。</p>
-<p>正确的做法，是这样：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UIBarButtonItem</span> *backItem = [[<span class="built_in">UIBarButtonItem</span> alloc]init];</span><br><span class="line">backItem.title = <span class="string">@"xxx"</span>;</span><br><span class="line"><span class="keyword">self</span>.navigationItem.backBarButtonItem = backItem;</span><br></pre></td></tr></table></figure>
-<p>在这里请注意，设置的是上一级控制器自己的<code>self.navigationItem.backBarButtonItem</code>，而不是下一级的。</p>
+<h3 id="我是正题"><a href="#我是正题" class="headerlink" title="我是正题"></a>我是正题</h3><p>Hexo在渲染的时候是默认把source下所有的.md文件渲染成.html的，但是我不想把我的README.md文件给渲染了，该如何忽略单个文件的渲染呢?答案就是站点根目录下的_config.yml文件，这里可以做好多个性化的配置，我们只需要找到<code>skip_render</code>这个key,这个key对应的默认目录是source，所以我们只需要在这里把需要忽略的文件名写上就好，渲染的时候就会自动忽略这个文件的渲染。</p>
+<p>比如我想要忽略README.md的渲染，只需要按照这样的格式填写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: README.md</span><br></pre></td></tr></table></figure>
+<p>就可以不再渲染README.md，嗯，就是这么简单。</p>
 
       
     </div>
@@ -322,7 +325,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/小技巧/" rel="tag">#小技巧</a>
+            <a href="/tags/小经验/" rel="tag">#小经验</a>
+          
+            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
           
         </div>
       
@@ -331,17 +336,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/05/20/XcodePlugin/" rel="next" title="Xcode常用插件整理">
-                <i class="fa fa-chevron-left"></i> Xcode常用插件整理
+              <a href="/2015/12/13/MacUpdateGit/" rel="next" title="Mac OS X 升级 Git">
+                <i class="fa fa-chevron-left"></i> Mac OS X 升级 Git
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/07/16/Xcode6-XSum/" rel="prev" title="Xcode6.X手动安装低版本模拟器">
-                Xcode6.X手动安装低版本模拟器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -367,8 +368,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/07/14/NavBackItem/"
-           data-title="自定义导航栏的返回按钮标题" data-url="http://xiaolei0808.com/2015/07/14/NavBackItem/">
+      <div class="ds-thread" data-thread-key="2016/03/20/hexoIgnoreRenderReadme/"
+           data-title="Hexo在部署时忽略README文件的渲染" data-url="http://xiaolei0808.com/2016/03/20/hexoIgnoreRenderReadme/">
       </div>
     
   </div>
@@ -511,7 +512,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#闲言碎语"><span class="nav-number">1.</span> <span class="nav-text">闲言碎语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我是正题"><span class="nav-number">2.</span> <span class="nav-text">我是正题</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
