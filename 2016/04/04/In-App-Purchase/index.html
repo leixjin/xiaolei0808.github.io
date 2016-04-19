@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="经验,小技巧," />
+  <meta name="keywords" content="学习,经验,支付," />
 
 
 
@@ -61,21 +61,16 @@
 
 
 
-<meta name="description" content="最近需要做一个带有位置搜索功能的界面，具体需求就是输入一个位置，能够自动联想出一串与之匹配的地名，供用户选择。在实际应用中，有许多APP都具有此类功能，比如微信朋友圈或者QQ空间的状态的位置，可以自动定位或手动输入，手动输入的时候会根据输入文字的变化，展示一个位置列表。
-想实现这个功能，且不导入第三方的SDK（如果导入第三方地图SDK，会使应用安装包增加10M左右），使用iOS系统自带的高德地图A">
+<meta name="description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="系统地图API位置提示搜索">
-<meta property="og:url" content="http://xiaolei0808.com/2015/07/23/MapAPI/index.html">
+<meta property="og:title" content="In-App Purchase(应用内购买)">
+<meta property="og:url" content="http://xiaolei0808.com/2016/04/04/In-App-Purchase/index.html">
 <meta property="og:site_name" content="Mr.King’s Blog">
-<meta property="og:description" content="最近需要做一个带有位置搜索功能的界面，具体需求就是输入一个位置，能够自动联想出一串与之匹配的地名，供用户选择。在实际应用中，有许多APP都具有此类功能，比如微信朋友圈或者QQ空间的状态的位置，可以自动定位或手动输入，手动输入的时候会根据输入文字的变化，展示一个位置列表。
-想实现这个功能，且不导入第三方的SDK（如果导入第三方地图SDK，会使应用安装包增加10M左右），使用iOS系统自带的高德地图A">
-<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/位置提示搜索.png">
-<meta property="og:updated_time" content="2015-07-23T07:56:31.000Z">
+<meta property="og:description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
+<meta property="og:updated_time" content="2016-04-19T11:57:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="系统地图API位置提示搜索">
-<meta name="twitter:description" content="最近需要做一个带有位置搜索功能的界面，具体需求就是输入一个位置，能够自动联想出一串与之匹配的地名，供用户选择。在实际应用中，有许多APP都具有此类功能，比如微信朋友圈或者QQ空间的状态的位置，可以自动定位或手动输入，手动输入的时候会根据输入文字的变化，展示一个位置列表。
-想实现这个功能，且不导入第三方的SDK（如果导入第三方地图SDK，会使应用安装包增加10M左右），使用iOS系统自带的高德地图A">
-<meta name="twitter:image" content="http://7xii6e.com1.z0.glb.clouddn.com/位置提示搜索.png">
+<meta name="twitter:title" content="In-App Purchase(应用内购买)">
+<meta name="twitter:description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
 
 
 
@@ -93,7 +88,7 @@
   };
 </script>
 
-  <title> 系统地图API位置提示搜索 | Mr.King’s Blog </title>
+  <title> In-App Purchase(应用内购买) | Mr.King’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -242,7 +237,7 @@
             
             
               
-                系统地图API位置提示搜索
+                In-App Purchase(应用内购买)
               
             
           </h1>
@@ -254,8 +249,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-23T15:29:55+08:00" content="2015-07-23">
-              2015-07-23
+            <time itemprop="dateCreated" datetime="2016-04-04T23:26:44+08:00" content="2016-04-04">
+              2016-04-04
             </time>
           </span>
 
@@ -284,8 +279,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/07/23/MapAPI/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/07/23/MapAPI/" itemprop="commentsCount"></span>
+                <a href="/2016/04/04/In-App-Purchase/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/In-App-Purchase/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -307,18 +302,9 @@
       
 
       
-        <p>最近需要做一个带有位置搜索功能的界面，具体需求就是输入一个位置，能够自动联想出一串与之匹配的地名，供用户选择。在实际应用中，有许多APP都具有此类功能，比如微信朋友圈或者QQ空间的状态的位置，可以自动定位或手动输入，手动输入的时候会根据输入文字的变化，展示一个位置列表。</p>
-<p>想实现这个功能，且不导入第三方的SDK（如果导入第三方地图SDK，会使应用安装包增加10M左右），使用iOS系统自带的高德地图API就能够轻松办到。</p>
+        <p>最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。</p>
 <a id="more"></a>
-<p>首先，导入<code>MapKit</code>框架  </p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;MapKit/MapKit.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>如果用不到<code>MapKit</code>框架中其他的API的话，可以单独导入以下框架</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;MapKit/MKLocalSearch.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;MapKit/MKLocalSearchRequest.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;MapKit/MKLocalSearchResponse.h&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>然后在输入文字变化所调用的方法里，实现下列关键方法</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建搜索请求对象</span></span><br><span class="line">   <span class="built_in">MKLocalSearchRequest</span> *request = [[<span class="built_in">MKLocalSearchRequest</span> alloc]init];</span><br><span class="line">   <span class="comment">//把文字赋值给这个自然语言查询的属性，我为了方便演示，在这里写死了一个值</span></span><br><span class="line">   request.naturalLanguageQuery = <span class="string">@"财富广场"</span>;</span><br><span class="line">   <span class="comment">//创建搜索对象</span></span><br><span class="line">   <span class="built_in">MKLocalSearch</span> *localSearch = [[<span class="built_in">MKLocalSearch</span> alloc]initWithRequest:request];</span><br><span class="line">   __<span class="keyword">weak</span> __<span class="keyword">typeof</span> (&amp;*<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</span><br><span class="line">   <span class="comment">//开始搜索的回调方法</span></span><br><span class="line">   [localSearch startWithCompletionHandler:^(<span class="built_in">MKLocalSearchResponse</span> *response, <span class="built_in">NSError</span> *error) &#123;</span><br><span class="line">       <span class="keyword">if</span> (error) &#123;</span><br><span class="line">           <span class="comment">//do something</span></span><br><span class="line">       &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">           <span class="comment">//遍历结果数组</span></span><br><span class="line">           [response.mapItems enumerateObjectsUsingBlock:^(<span class="keyword">id</span> obj, <span class="built_in">NSUInteger</span> idx, <span class="built_in">BOOL</span> *stop) &#123;</span><br><span class="line">               <span class="comment">//位置对象，包含地理位置的名称、地址、经纬度等详细信息，根据需要获取具体值</span></span><br><span class="line">               <span class="built_in">MKMapItem</span> *mapItem = obj;</span><br><span class="line">               <span class="comment">//以下为我实现列表展示功能所写的代码</span></span><br><span class="line">               JXLMapResultModel *model = [JXLMapResultModel new];</span><br><span class="line">               model.name = mapItem.name;</span><br><span class="line">               [weakSelf.modelArray addObject:model];</span><br><span class="line">               <span class="keyword">if</span> (response.mapItems.count == idx + <span class="number">1</span>) &#123;</span><br><span class="line">                   [weakSelf.tableView reloadData];</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;];</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure>
-<p>最终可以实现这样的效果</p>
-<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/位置提示搜索.png" alt=""></p>
-
+<h2 id="1-帐号准备（账户信息，用于收款之类的）"><a href="#1-帐号准备（账户信息，用于收款之类的）" class="headerlink" title="1.帐号准备（账户信息，用于收款之类的）"></a>1.帐号准备（账户信息，用于收款之类的）</h2><h2 id="2-App创建"><a href="#2-App创建" class="headerlink" title="2.App创建"></a>2.App创建</h2><h2 id="3-产品创建、定价"><a href="#3-产品创建、定价" class="headerlink" title="3.产品创建、定价"></a>3.产品创建、定价</h2><h2 id="4-开发"><a href="#4-开发" class="headerlink" title="4.开发"></a>4.开发</h2><h2 id="5-测试"><a href="#5-测试" class="headerlink" title="5.测试"></a>5.测试</h2><h1 id="push指定页面"><a href="#push指定页面" class="headerlink" title="push指定页面"></a><a href="letvsportslaunch://com.lesports.glivesports/open?className=LEPostDetailViewController&amp;postsId=1792933171460445763832338&amp;fromType=0" target="_blank" rel="external">push指定页面</a></h1><h1 id="指定tab"><a href="#指定tab" class="headerlink" title="指定tab"></a><a href="letvsportslaunch://com.lesports.glivesports/open?selectIndex=4" target="_blank" rel="external">指定tab</a></h1><h1 id="指定-tab加push"><a href="#指定-tab加push" class="headerlink" title="指定+tab加push"></a><a href="letvsportslaunch://com.lesports.glivesports/open?selectIndex=2&amp;className=LEPostDetailViewController&amp;postsId=1792933171460445763832338&amp;fromType=0" target="_blank" rel="external">指定+tab加push</a></h1><h1 id="跳转到社区主页"><a href="#跳转到社区主页" class="headerlink" title="跳转到社区主页"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=group&amp;groupId=20504" target="_blank" rel="external">跳转到社区主页</a></h1>
       
     </div>
 
@@ -332,9 +318,11 @@
       
         <div class="post-tags">
           
+            <a href="/tags/学习/" rel="tag">#学习</a>
+          
             <a href="/tags/经验/" rel="tag">#经验</a>
           
-            <a href="/tags/小技巧/" rel="tag">#小技巧</a>
+            <a href="/tags/支付/" rel="tag">#支付</a>
           
         </div>
       
@@ -343,17 +331,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/18/UIDisplaySearchController/" rel="next" title="纯代码创建UIDisplaySearchController遇到的问题">
-                <i class="fa fa-chevron-left"></i> 纯代码创建UIDisplaySearchController遇到的问题
+              <a href="/2016/03/20/hexoIgnoreRenderReadme/" rel="next" title="Hexo在部署时忽略README文件的渲染">
+                <i class="fa fa-chevron-left"></i> Hexo在部署时忽略README文件的渲染
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/08/12/GitFork/" rel="prev" title="与原作者同步Fork代码仓库">
-                与原作者同步Fork代码仓库 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -379,8 +363,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/07/23/MapAPI/"
-           data-title="系统地图API位置提示搜索" data-url="http://xiaolei0808.com/2015/07/23/MapAPI/">
+      <div class="ds-thread" data-thread-key="2016/04/04/In-App-Purchase/"
+           data-title="In-App Purchase(应用内购买)" data-url="http://xiaolei0808.com/2016/04/04/In-App-Purchase/">
       </div>
     
   </div>
@@ -523,7 +507,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-帐号准备（账户信息，用于收款之类的）"><span class="nav-number">1.</span> <span class="nav-text">1.帐号准备（账户信息，用于收款之类的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-App创建"><span class="nav-number">2.</span> <span class="nav-text">2.App创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-产品创建、定价"><span class="nav-number">3.</span> <span class="nav-text">3.产品创建、定价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-开发"><span class="nav-number">4.</span> <span class="nav-text">4.开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试"><span class="nav-number">5.</span> <span class="nav-text">5.测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#push指定页面"><span class="nav-number"></span> <span class="nav-text">push指定页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指定tab"><span class="nav-number"></span> <span class="nav-text">指定tab</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指定-tab加push"><span class="nav-number"></span> <span class="nav-text">指定+tab加push</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跳转到社区主页"><span class="nav-number"></span> <span class="nav-text">跳转到社区主页</span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
