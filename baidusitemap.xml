@@ -3,30 +3,6 @@
 
     
   <url>
-    <loc>http://xiaolei0808.com/2016/04/04/In-App-Purchase/</loc>
-    <lastmod>2016-04-19T11:57:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>In-App Purchase(应用内购买)</title>
-        <pubTime>2016-04-04T15:26:44.000Z</pubTime>
-        
-        <tag>学习 </tag>
-         
-        <tag>经验 </tag>
-         
-        <tag>支付 </tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://xiaolei0808.com/2016/03/20/hexoIgnoreRenderReadme/</loc>
     <lastmod>2016-03-20T07:36:18.000Z</lastmod>
     <data>
@@ -79,9 +55,9 @@
         <title>Swift中的闭包(Closures)</title>
         <pubTime>2015-03-27T02:52:48.000Z</pubTime>
         
-        <tag>学习 </tag>
-         
         <tag>iOS </tag>
+         
+        <tag>学习 </tag>
          
         <tag>Swift </tag>
          
@@ -105,9 +81,9 @@
         <title>SQLite和SQL</title>
         <pubTime>2015-04-02T03:00:31.000Z</pubTime>
         
-        <tag>学习 </tag>
-         
         <tag>iOS </tag>
+         
+        <tag>学习 </tag>
          
         <tag>SQL </tag>
          
@@ -349,9 +325,9 @@
         <title>使用CocoaPods管理第三方库</title>
         <pubTime>2015-04-21T07:11:36.000Z</pubTime>
         
-        <tag>学习 </tag>
-         
         <tag>iOS </tag>
+         
+        <tag>学习 </tag>
          
          
            
@@ -371,9 +347,9 @@
         <title>解决DrawInRect绘图不清晰的问题</title>
         <pubTime>2015-04-08T10:46:44.000Z</pubTime>
         
-        <tag>学习 </tag>
-         
         <tag>iOS </tag>
+         
+        <tag>学习 </tag>
          
          
            
@@ -415,9 +391,9 @@
         <title>iOS中Push功能的实现</title>
         <pubTime>2015-04-14T06:15:59.000Z</pubTime>
         
-        <tag>学习 </tag>
-         
         <tag>iOS </tag>
+         
+        <tag>学习 </tag>
          
          
            
