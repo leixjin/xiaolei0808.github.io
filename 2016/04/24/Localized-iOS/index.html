@@ -1,0 +1,948 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="PwFUNPzKSVRFLhMiomAZyFrrpp8Yk2_J9qqu9EBA9JI" />
+
+
+
+
+  <meta name="baidu-site-verification" content="EcaQ5pADGr" />
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS,国际化," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="一个iOS应用程序，如果想要在多个国家和地区的AppleStore上架，是很简单的一件事情。如果想要每个国家和地区的用户都能获得良好的使用体验，首先需要做的一件事情就是能够让用户打开App的第一时间，看到的是自己熟悉的语言。也就是说App能够根据用户当前所使用的语言或者用户手动选择的语言，实时的改变App内的语言。这就是iOS国际化所要实现的目的。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS国际化开发">
+<meta property="og:url" content="http://xiaolei0808.com/2016/04/24/Localized-iOS/index.html">
+<meta property="og:site_name" content="Mr.King’s Blog">
+<meta property="og:description" content="一个iOS应用程序，如果想要在多个国家和地区的AppleStore上架，是很简单的一件事情。如果想要每个国家和地区的用户都能获得良好的使用体验，首先需要做的一件事情就是能够让用户打开App的第一时间，看到的是自己熟悉的语言。也就是说App能够根据用户当前所使用的语言或者用户手动选择的语言，实时的改变App内的语言。这就是iOS国际化所要实现的目的。">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_support.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_add.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_string.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_choose.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_list.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_LocalizationStrings.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localize:english.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localize:chinese.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized%5Csearch.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized:localImage.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized:localImageList.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized:image:english.png">
+<meta property="og:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized:image:chinese.png">
+<meta property="og:updated_time" content="2016-04-24T16:52:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS国际化开发">
+<meta name="twitter:description" content="一个iOS应用程序，如果想要在多个国家和地区的AppleStore上架，是很简单的一件事情。如果想要每个国家和地区的用户都能获得良好的使用体验，首先需要做的一件事情就是能够让用户打开App的第一时间，看到的是自己熟悉的语言。也就是说App能够根据用户当前所使用的语言或者用户手动选择的语言，实时的改变App内的语言。这就是iOS国际化所要实现的目的。">
+<meta name="twitter:image" content="http://7xii6e.com1.z0.glb.clouddn.com/Localized_support.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 11224563,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> iOS国际化开发 | Mr.King’s Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-61499702-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?61de9d3c97ec984c84513a0c54b6a79a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Mr.King’s Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">所谓迷茫，不过是你的才华配不上你的梦想。</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                iOS国际化开发
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-24T16:05:44+08:00" content="2016-04-24">
+              2016-04-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/24/Localized-iOS/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/Localized-iOS/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>一个iOS应用程序，如果想要在多个国家和地区的AppleStore上架，是很简单的一件事情。如果想要每个国家和地区的用户都能获得良好的使用体验，首先需要做的一件事情就是能够让用户打开App的第一时间，看到的是自己熟悉的语言。也就是说App能够根据用户当前所使用的语言或者用户手动选择的语言，实时的改变App内的语言。这就是iOS国际化所要实现的目的。</p>
+<a id="more"></a>
+<h1 id="国际化开发的两种情况"><a href="#国际化开发的两种情况" class="headerlink" title="国际化开发的两种情况"></a>国际化开发的两种情况</h1><p>1.在App开发之初，就已经有了国际化开发的Future，这种情况下进行国际化是很容易的，只要在开发过程中把需要国际化的字符串进行简单的处理即可。</p>
+<p>2.已经开发完毕，开发之初并没有进行国际化适配，突然来需求说需要进行国际化，此时面对项目中成百上千的字符串，内心一定是崩溃的。</p>
+<p>接下来，我会分别对这两种情况来说一下开发过程。</p>
+<blockquote>
+<p><em>注:演示所使用的Xcode版本为7.3。</em></p>
+</blockquote>
+<h1 id="新启动的工程"><a href="#新启动的工程" class="headerlink" title="新启动的工程"></a>新启动的工程</h1><h2 id="项目国际化配置"><a href="#项目国际化配置" class="headerlink" title="项目国际化配置"></a>项目国际化配置</h2><p>1.找到Project的Localizations选项，点击加号(+)，添加需要国际化的语言(一般工程中默认支持英文，为了方便演示，我只添加了中文简体支持)。此时会弹出一个选择框，选择你所要支持的Xib文件或StoryBoard文件。不需要支持Xib或StoryBoard文件则不勾选。</p>
+<blockquote>
+<p>这里Use Base Internationalization开启状态下，每个国际化资源文件会有个Base选项，主要针对String，Xib，Storyboard作为一个基础的模板。</p>
+</blockquote>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_support.png" alt="是否添加Xib支持"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_add.png" alt="添加多语言支持"></p>
+<p>2.创建多语言文件，一般命名为Localizable.string。如果在开发过程中不指定文件名，系统会默认在Bundle中寻找这个名称的文件。当然，也可以任意命名，在开发过程中手动指定一下文件名即可。</p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_string.png" alt="添加多语言文件"></p>
+<p>3.找到并选中刚刚新建的Localizable.string文件，点击Inspector下Localization选项下的Localize按钮，任意选择一个语言(我选择的是English)，然后点击Localize按钮，此时Localization选项会出现应用支持的语言列表，选择需要国际化的语言，Localizable.string文件下则会多出和所选择语言对应的子文件。</p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized.png" alt="点击Localize按钮"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_choose.png" alt="选择语言"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_list.png" alt="出现语言列表"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized_localized_LocalizationStrings.png" alt="添加需要国际化的语言"></p>
+<h2 id="代码中对国际化内容的适配"><a href="#代码中对国际化内容的适配" class="headerlink" title="代码中对国际化内容的适配"></a>代码中对国际化内容的适配</h2><p>1.我在ViewController中初始化了一个Label，并用NSLocalized宏对这个Label的字符串进行国际化适配。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UILabel</span> *localizationLabel = [[<span class="built_in">UILabel</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">150</span>, <span class="number">200</span>, <span class="number">100</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:localizationLabel];</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//利用NSLocalizedString宏对字符串进行国际化适配</span></span><br><span class="line">    localizationLabel.text = <span class="built_in">NSLocalizedString</span>(<span class="string">@"Hello"</span>, <span class="string">@"description for this key."</span>);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>既然用到了NSLocalizedString宏，我们就有必要了解一下这个宏到底干了什么。</p>
+<h3 id="NSLocalizedString宏探秘"><a href="#NSLocalizedString宏探秘" class="headerlink" title="NSLocalizedString宏探秘"></a>NSLocalizedString宏探秘</h3><p><strong>点进宏定义文件：</strong></p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#define NSLocalizedString(key, comment) \</span></span><br><span class="line">	    [[<span class="built_in">NSBundle</span> mainBundle] localizedStringForKey:(key) value:<span class="string">@""</span> table:<span class="literal">nil</span>]</span><br><span class="line"><span class="meta">#define NSLocalizedStringFromTable(key, tbl, comment) \</span></span><br><span class="line">	    [[<span class="built_in">NSBundle</span> mainBundle] localizedStringForKey:(key) value:<span class="string">@""</span> table:(tbl)]</span><br><span class="line"><span class="meta">#define NSLocalizedStringFromTableInBundle(key, tbl, bundle, comment) \</span></span><br><span class="line">	    [bundle localizedStringForKey:(key) value:<span class="string">@""</span> table:(tbl)]</span><br><span class="line"><span class="meta">#define NSLocalizedStringWithDefaultValue(key, tbl, bundle, val, comment) \</span></span><br><span class="line">	    [bundle localizedStringForKey:(key) value:(val) table:(tbl)]</span><br></pre></td></tr></table></figure>
+<p><strong>我们会发现国际化相关所定义的4个宏。</strong></p>
+<ul>
+<li>NSLocalizedString(key, comment)</li>
+</ul>
+<p>NSLocalizedString其实是从mainBundle中默认读取了Localizable.string中的key所对应的value。comment参数则是对key的描述，有利于翻译人员理解这个key所适用的场景。</p>
+<ul>
+<li>NSLocalizedStringFromTable(key, tbl, comment)</li>
+</ul>
+<p>NSLocalizedStringFromTable则是从mainBundle中读取指定多语言文件中的key所对应的value。tbl参数就是用于指定多语言文件名的参数。</p>
+<ul>
+<li>NSLocalizedStringFromTableInBundle(key, tbl, bundle, comment)</li>
+</ul>
+<p>NSLocalizedStringFromTableInBundle会读取指定Bundle中所指定的多语言文件中的key所对应的value。bundle参数就是用于传入所指定的Bundle。</p>
+<ul>
+<li>NSLocalizedStringWithDefaultValue(key, tbl, bundle, val, comment)</li>
+</ul>
+<p>NSLocalizedStringWithDefaultValue则是从指定Bundle中读取指定多语言文件中的key所对应的value，如果取不到对应的value，允许指定一个默认的value。val参数就是用于传入默认的value值。</p>
+<p>2.了解了各个宏定义所代表的含义，我们继续往下写。</p>
+<p>在Localizable.strings(English)中加入如下键值对：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> = <span class="string">"Hello"</span>;</span><br></pre></td></tr></table></figure>
+<p>在Localizable.strings(Chinese(Simplified))中加入如下键值对：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"Hello"</span> = <span class="string">"你好"</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>编译运行：</strong></p>
+<h3 id="系统语言为英文时显示效果："><a href="#系统语言为英文时显示效果：" class="headerlink" title="系统语言为英文时显示效果："></a>系统语言为英文时显示效果：</h3><p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localize:english.png" alt="英文运行结果"></p>
+<h3 id="系统语言为中文时显示效果："><a href="#系统语言为中文时显示效果：" class="headerlink" title="系统语言为中文时显示效果："></a>系统语言为中文时显示效果：</h3><p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localize:chinese.png" alt="中文运行结果"></p>
+<p>可见，文本会随着系统语言的改变而改变。至此，一个简单的可以跟随系统语言切换的Demo就完成了。</p>
+<h1 id="已开发多个版本的工程"><a href="#已开发多个版本的工程" class="headerlink" title="已开发多个版本的工程"></a>已开发多个版本的工程</h1><p>工程开发了许久，代码也写了几万行了，这时Boss突然说要进行国际化适配。</p>
+<p>What the <em>*</em>!!! </p>
+<p>淡定，除了女朋友，还有什么能难道程序猿哥哥的事情呢？</p>
+<p>下面开始。</p>
+<h2 id="添加应用需要国际化的语言"><a href="#添加应用需要国际化的语言" class="headerlink" title="添加应用需要国际化的语言"></a>添加应用需要国际化的语言</h2><p>在Project的Localizations选项，点击加号(+)，添加需要国际化的语言(一般工程中默认支持英文，为了方便演示，我只添加了中文简体支持)。</p>
+<h2 id="批量替换字符串"><a href="#批量替换字符串" class="headerlink" title="批量替换字符串"></a>批量替换字符串</h2><p>既然要在已有工程上进行适配，首先要做的就是给需要进行国际化的字符串加上NSLocalizedString宏了。</p>
+<ul>
+<li>2B程序猿</li>
+</ul>
+<p>会一处一处的修改每个文件的每处字符串，直到天荒地老、海枯石烂。</p>
+<ul>
+<li>非主流程序猿</li>
+</ul>
+<p>各种shell、Python脚本齐上阵。</p>
+<ul>
+<li>文艺程序猿</li>
+</ul>
+<p>Xcode大法好。正则大法好。</p>
+<p>我选择第三种-。-</p>
+<p>首先，我们需要一个正则，去匹配工程中所有需要替换的文本。如果你不太了解正则，<a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">点我点我！！</a>。</p>
+<p>下面这个正则可以匹配到所有符合OC字符串格式的包含有中文的字符串。如果你用Swift，请去掉<code>@</code>。</p>
+<p><code>@&quot;[^&quot;]*[\u4E00-\u9FA5]+[^&quot;\n]*?&quot;</code></p>
+<p>然后，重点来了。Command+Shift+F，进入全局搜索引擎，切换为Replace模式，并把匹配模式改为Regular Expression。</p>
+<p>在搜索条件里输入<code>(@&quot;[^&quot;]*[\u4E00-\u9FA5]+[^&quot;\n]*?&quot;)</code>，在下面替换内容里输入<code>NSLocalizedString($1, nil)</code>。此处正则表达式两边加括号的目的是为了能够在替换时用<code>$1</code>获取原有字符串的值，在替换时把原有值放入宏定义内key的位置。然后，搜索，可以看到搜索结果，点击<code>Replace All</code>，即可完成替换。</p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized%5Csearch.png" alt="正则搜索"></p>
+<h2 id="生成多语言文件"><a href="#生成多语言文件" class="headerlink" title="生成多语言文件"></a>生成多语言文件</h2><p>替换完了原有字符串，下面就是生成多语言文件了。作为一个文艺程序猿，我是不可能一处一处的把项目中的字符串挑出来再写到Localizable.strings文件里的。</p>
+<p>好在Xcode自带了一个命令行工具genstrings。我们可以利用这个工具生成所需的多语言文件。</p>
+<p>首先，我们需要先新建所需语言的文件夹。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd 工程目录</span><br><span class="line">mkdir en.lproj</span><br><span class="line">mkdir zh-Hans.lproj</span><br></pre></td></tr></table></figure>
+<p>然后，遍历所有<code>.m</code>文件，根据每个文件内的需要国际化的字符串生成key和value。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -name *.m | xargs genstrings -o en.lproj</span><br><span class="line">find . -name *.m | xargs genstrings -o zh-Hans.lproj</span><br></pre></td></tr></table></figure>
+<p>此时，<code>en.lproj</code>和<code>zh-Hans.lproj</code>文件夹中就应该有了相应的Localizable.string文件了。</p>
+<p>我们把这两个文件夹拖到工程里，然后在相应的Localizable.strings文件中，修改每个key所对应的value值就行了(这个应该是翻译干的事儿)。</p>
+<p>至此，项目的国际化已经适配完成。</p>
+<h1 id="应用内动态更新语言"><a href="#应用内动态更新语言" class="headerlink" title="应用内动态更新语言"></a>应用内动态更新语言</h1><p>以上所做的国际化，只会跟随系统语言进行改变，并且需要Kill掉App重新打开才会有效果。如果有一种需求，在应用内有一个语言列表，只要选中其中一种语言，点击确定后就能立刻更新应用内所有界面的语言，此时该怎么做呢？目前有好多大厂应用，比如微信、支付宝等都支持这种切换方式(微信和支付宝的实现方式不太一样，咱们稍后再叙)。</p>
+<h2 id="替换系统国际化宏定义"><a href="#替换系统国际化宏定义" class="headerlink" title="替换系统国际化宏定义"></a>替换系统国际化宏定义</h2><p>由系统宏定义可知，如果使用了系统的NSLocalizedString宏，它是默认是从mainBundle中读取Localizable.strings中的value的。使用其他的3个宏则可以指定文件名或是Bundle，但是使用起来也是不太灵活。为了使用起来更加方便灵活，我们可以自定义一个国际化的宏，实现其内部的逻辑。</p>
+<p>下面，给出一种我自己的实现方式。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  LELocalizedHelper.h</span></span><br><span class="line"><span class="comment">//  Created by 金小白 on 16/4/23.</span></span><br><span class="line"><span class="comment">//  Copyright © 2016年 xiaolei.jin. All rights reserved.</span></span><br><span class="line"><span class="comment">//  国际化</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#define LELocalizedString(key) [[LELocalizedHelper standardHelper] stringWithKey:key]</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">LELocalizedHelper</span> : <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line">+ (instancetype)standardHelper;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSBundle</span> *)bundle;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSString</span> *)currentLanguage;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setUserLanguage:(<span class="built_in">NSString</span> *)language;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSString</span> *)stringWithKey:(<span class="built_in">NSString</span> *)key;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  LELocalizedHelper.m</span></span><br><span class="line"><span class="comment">//  Created by 金小白 on 16/4/23.</span></span><br><span class="line"><span class="comment">//  Copyright © 2016年 xiaolei.jin. All rights reserved.</span></span><br><span class="line"><span class="comment">//  国际化</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#import <span class="meta-string">"LELocalizedHelper.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="built_in">NSBundle</span> *_bundle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> kUserLanguage = <span class="string">@"kUserLanguage"</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">LELocalizedHelper</span></span></span><br><span class="line"></span><br><span class="line">+ (instancetype)standardHelper &#123;</span><br><span class="line">    <span class="keyword">static</span> LELocalizedHelper *helper;</span><br><span class="line">    <span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken;</span><br><span class="line">    <span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;</span><br><span class="line">        helper = [[LELocalizedHelper alloc] init];</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> helper;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (instancetype)init &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span> = [<span class="keyword">super</span> init]) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (!_bundle) &#123;</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">NSUserDefaults</span> *defaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">NSString</span> *userLanguage = [defaults valueForKey:kUserLanguage];</span><br><span class="line">            </span><br><span class="line">            <span class="comment">//用户未手动设置过语言</span></span><br><span class="line">            <span class="keyword">if</span> (userLanguage.length == <span class="number">0</span>) &#123;</span><br><span class="line">                </span><br><span class="line">                <span class="built_in">NSArray</span> *languages = [[<span class="built_in">NSBundle</span> mainBundle] preferredLocalizations];</span><br><span class="line">                </span><br><span class="line">                <span class="built_in">NSString</span> *systemLanguage = languages.firstObject;</span><br><span class="line">                </span><br><span class="line">                userLanguage = systemLanguage;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> ([userLanguage isEqualToString:<span class="string">@"zh-HK"</span>] || [userLanguage isEqualToString:<span class="string">@"zh-TW"</span>]) &#123;</span><br><span class="line">                userLanguage = <span class="string">@"zh-Hant"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">NSString</span> *path = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:userLanguage ofType:<span class="string">@"lproj"</span>];</span><br><span class="line">            </span><br><span class="line">            _bundle = [<span class="built_in">NSBundle</span> bundleWithPath:path];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSBundle</span> *)bundle &#123;</span><br><span class="line">    <span class="keyword">return</span> _bundle;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSString</span> *)currentLanguage &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSUserDefaults</span> *defaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSString</span> *userLanguage = [defaults valueForKey:kUserLanguage];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (userLanguage.length == <span class="number">0</span>) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSArray</span> *languages = [[<span class="built_in">NSBundle</span> mainBundle] preferredLocalizations];</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSString</span> *systemLanguage = languages.firstObject;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> systemLanguage;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> userLanguage;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setUserLanguage:(<span class="built_in">NSString</span> *)language &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSUserDefaults</span> *defaults = [<span class="built_in">NSUserDefaults</span> standardUserDefaults];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSString</span> *path = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:language ofType:<span class="string">@"lproj"</span>];</span><br><span class="line">    </span><br><span class="line">    _bundle = [<span class="built_in">NSBundle</span> bundleWithPath:path];</span><br><span class="line">    </span><br><span class="line">    [defaults setValue:language forKey:kUserLanguage];</span><br><span class="line">    </span><br><span class="line">    [defaults synchronize];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSString</span> *)stringWithKey:(<span class="built_in">NSString</span> *)key &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (_bundle) &#123;</span><br><span class="line">        <span class="keyword">return</span> [_bundle localizedStringForKey:key value:<span class="literal">nil</span> table:<span class="string">@"Localizable"</span>];</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">NSLocalizedString</span>(key, <span class="literal">nil</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>使用的时候，只需把原来NSLocalizedString(key, nil)的地方替换为LELocalizedString(key)即可。此时如果用户没有手动更改过语言，默认是跟随系统语言变化的。</p>
+<h2 id="动态刷新所有页面"><a href="#动态刷新所有页面" class="headerlink" title="动态刷新所有页面"></a>动态刷新所有页面</h2><p>替换完了宏定义，下面就是全局刷新界面了。实现方式上来说，我目前共想出了3种，实现方式上来说各有优劣。</p>
+<h3 id="重新载入rootViewController"><a href="#重新载入rootViewController" class="headerlink" title="重新载入rootViewController"></a>重新载入rootViewController</h3><p>这个方法应该是编码成本最低的方法了，只需要把原有的rootViewController移除并清空，然后重新设置一遍rootViewController就行了。但是这种实现方式会重新加载已经原来已经加载好的所有界面。</p>
+<h3 id="语言改变发送通知"><a href="#语言改变发送通知" class="headerlink" title="语言改变发送通知"></a>语言改变发送通知</h3><p>在用户切换语言的时候，发送一个通知，然后在各个界面接收通知，更新所有需要更新的文本即可。这种方法适合新建的项目，在代码编写之初就预留好更新文本的方法，收到通知后调用此方法就行。如果已经是一个已上线项目，则改动成本比较高，需要改动的地方比较多。</p>
+<h3 id="h暴露一个更新文字的方法"><a href="#h暴露一个更新文字的方法" class="headerlink" title=".h暴露一个更新文字的方法"></a>.h暴露一个更新文字的方法</h3><p>在用户切换语言的时候，遍历所有已经加载的界面，调用更新文字的方法。这种实现也是比较适合新建的项目，在代码编写之初就预留好更新文本的方法。如果项目已上线，则改动成本较高。</p>
+<p>上文说过，微信和支付宝的实现方式不太一样。根据我的观察和判断，微信使用的是上面的第一种方法，也就是重新载入rootViewController的方法。因为微信切换完语言之后，迅速的切换到了根页面，又迅速的push到了设置界面，有一个界面跳跃的过程，而且原来所有的已经滑到底部的列表全部都重置到了最顶部。根据我的推断，微信项目在编写之初也是没有考虑到后期国际化的需求，迫于过大的改动成本，只好使用第一种方法。而支付宝切换过程就比较完美，实现了无缝切换，和有可能是前期编码过程中就预留了更新文本的方法，后期直接调用就可以(不排除后期投入精力进行重构的可能)。</p>
+<p>以上就是全部的iOS文字国际化的过程。</p>
+<h1 id="图片国际化"><a href="#图片国际化" class="headerlink" title="图片国际化"></a>图片国际化</h1><h2 id="网络图片国际化"><a href="#网络图片国际化" class="headerlink" title="网络图片国际化"></a>网络图片国际化</h2><p>很简单，只要在请求的时候根据不同的语言环境调用不同的接口就可以。</p>
+<h2 id="本地图片国际化"><a href="#本地图片国际化" class="headerlink" title="本地图片国际化"></a>本地图片国际化</h2><p>本地图片的国际化也有两种实现方式。</p>
+<h3 id="根据不同语言指定不同的图片名称"><a href="#根据不同语言指定不同的图片名称" class="headerlink" title="根据不同语言指定不同的图片名称"></a>根据不同语言指定不同的图片名称</h3><p>这种方法可以在初始化图片名称的时候使用国际化宏定义，然后在对应语言的多语言文件中，根据图片对应的key指定相应语言的value即可。</p>
+<h3 id="利用Xcode生成"><a href="#利用Xcode生成" class="headerlink" title="利用Xcode生成"></a>利用Xcode生成</h3><p>这种方法不用对代码进行改动，只需要在工程目录中新建一个Group，放入所有需要国际化的原有图片。然后选中图片，点击右侧的Localization，选中需要支持的语言即可在原有图片下生成选中语言所对应的子文件。然后替换掉对应语言的子图片即可。</p>
+<blockquote>
+<p>注：图片名必须和原有名字一致</p>
+</blockquote>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized:localImage.png" alt="生成国际化图片"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized:localImageList.png" alt="国际化图片列表"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized:image:english.png" alt="英文图片"></p>
+<p><img src="http://7xii6e.com1.z0.glb.clouddn.com/Localized:image:chinese.png" alt="中文图片"></p>
+<p>这样，在更改系统语言的时候，图片也会随之改变了。</p>
+<p>以上就是我总结的所有的有关iOS国际化的操作了，如果有疏漏的地方，请各位看官多多指正。共勉。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+            <a href="/tags/国际化/" rel="tag">#国际化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/20/hexoIgnoreRenderReadme/" rel="next" title="Hexo在部署时忽略README文件的渲染">
+                <i class="fa fa-chevron-left"></i> Hexo在部署时忽略README文件的渲染
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/04/24/Localized-iOS/"
+           data-title="iOS国际化开发" data-url="http://xiaolei0808.com/2016/04/24/Localized-iOS/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Mr.King" />
+          <p class="site-author-name" itemprop="name">Mr.King</p>
+          <p class="site-description motion-element" itemprop="description">Mr.King’s Blog.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/xiaolei0808" target="_blank">
+                  
+                    <i class="fa fa-github"></i> GitHub
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/xiaolei0808" target="_blank">
+                  
+                    <i class="fa fa-twitter"></i> Twitter
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/xiaolei0808" target="_blank">
+                  
+                    <i class="fa fa-weibo"></i> Weibo
+                  
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/xiaolei0808" target="_blank">
+                  
+                    <i class="fa fa-globe"></i> ZhiHu
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+            <div class="links-of-blogroll-title">友情链接</div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://macshuo.com/" target="_blank">MacTalk</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.51up.club" target="_blank">木糖醇</a>
+                </li>
+              
+            </ul>
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#国际化开发的两种情况"><span class="nav-number">1.</span> <span class="nav-text">国际化开发的两种情况</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#新启动的工程"><span class="nav-number">2.</span> <span class="nav-text">新启动的工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目国际化配置"><span class="nav-number">2.1.</span> <span class="nav-text">项目国际化配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码中对国际化内容的适配"><span class="nav-number">2.2.</span> <span class="nav-text">代码中对国际化内容的适配</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#NSLocalizedString宏探秘"><span class="nav-number">2.2.1.</span> <span class="nav-text">NSLocalizedString宏探秘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统语言为英文时显示效果："><span class="nav-number">2.2.2.</span> <span class="nav-text">系统语言为英文时显示效果：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统语言为中文时显示效果："><span class="nav-number">2.2.3.</span> <span class="nav-text">系统语言为中文时显示效果：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#已开发多个版本的工程"><span class="nav-number">3.</span> <span class="nav-text">已开发多个版本的工程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#添加应用需要国际化的语言"><span class="nav-number">3.1.</span> <span class="nav-text">添加应用需要国际化的语言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量替换字符串"><span class="nav-number">3.2.</span> <span class="nav-text">批量替换字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成多语言文件"><span class="nav-number">3.3.</span> <span class="nav-text">生成多语言文件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用内动态更新语言"><span class="nav-number">4.</span> <span class="nav-text">应用内动态更新语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换系统国际化宏定义"><span class="nav-number">4.1.</span> <span class="nav-text">替换系统国际化宏定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态刷新所有页面"><span class="nav-number">4.2.</span> <span class="nav-text">动态刷新所有页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重新载入rootViewController"><span class="nav-number">4.2.1.</span> <span class="nav-text">重新载入rootViewController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言改变发送通知"><span class="nav-number">4.2.2.</span> <span class="nav-text">语言改变发送通知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h暴露一个更新文字的方法"><span class="nav-number">4.2.3.</span> <span class="nav-text">.h暴露一个更新文字的方法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片国际化"><span class="nav-number">5.</span> <span class="nav-text">图片国际化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络图片国际化"><span class="nav-number">5.1.</span> <span class="nav-text">网络图片国际化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地图片国际化"><span class="nav-number">5.2.</span> <span class="nav-text">本地图片国际化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#根据不同语言指定不同的图片名称"><span class="nav-number">5.2.1.</span> <span class="nav-text">根据不同语言指定不同的图片名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用Xcode生成"><span class="nav-number">5.2.2.</span> <span class="nav-text">利用Xcode生成</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr.King</span>
+  &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;本页点击 <span id="busuanzi_value_page_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;本站总点击 <span id="busuanzi_value_site_pv"></span> 次
+&nbsp;&nbsp;|&nbsp;&nbsp;您是第 <span id="busuanzi_value_site_uv"></span> 位访客
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    bp.src = '//push.zhanzhang.baidu.com/push.js';
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"xiaolei0808"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
