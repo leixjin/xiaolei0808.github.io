@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习," />
+  <meta name="keywords" content="学习,经验,支付," />
 
 
 
@@ -61,16 +61,16 @@
 
 
 
-<meta name="description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
+<meta name="description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="与原作者同步Fork代码仓库">
-<meta property="og:url" content="http://xiaolei0808.com/2015/08/12/GitFork/index.html">
+<meta property="og:title" content="In-App Purchase(应用内购买)">
+<meta property="og:url" content="http://xiaolei0808.com/2016/04/04/In-App-Purchase/index.html">
 <meta property="og:site_name" content="Mr.King’s Blog">
-<meta property="og:description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
-<meta property="og:updated_time" content="2016-03-19T14:16:58.000Z">
+<meta property="og:description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
+<meta property="og:updated_time" content="2016-06-07T16:51:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="与原作者同步Fork代码仓库">
-<meta name="twitter:description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
+<meta name="twitter:title" content="In-App Purchase(应用内购买)">
+<meta name="twitter:description" content="最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。">
 
 
 
@@ -88,7 +88,7 @@
   };
 </script>
 
-  <title> 与原作者同步Fork代码仓库 | Mr.King’s Blog </title>
+  <title> In-App Purchase(应用内购买) | Mr.King’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -237,7 +237,7 @@
             
             
               
-                与原作者同步Fork代码仓库
+                In-App Purchase(应用内购买)
               
             
           </h1>
@@ -249,8 +249,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-08-12T22:35:56+08:00" content="2015-08-12">
-              2015-08-12
+            <time itemprop="dateCreated" datetime="2016-04-04T23:26:44+08:00" content="2016-04-04">
+              2016-04-04
             </time>
           </span>
 
@@ -263,8 +263,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -279,8 +279,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/08/12/GitFork/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/12/GitFork/" itemprop="commentsCount"></span>
+                <a href="/2016/04/04/In-App-Purchase/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/04/In-App-Purchase/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -302,35 +302,11 @@
       
 
       
-        <p>今天遇到了一个问题，前几天在远程仓库<code>fork</code>了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用<code>git</code>的经验，所以费了点时间，最终还是顺利解决了。</p>
+        <p>最近在做一个会员的产品。根据苹果公司的规定，像这种在应用内使用的服务，进行购买或者充值的时候，就必须使用苹果官方的支付方式进行支付，否则审核是不予通过的。经过几天的实践，我对IAP的整体流程也算是理解的比较透彻了，下面就总结一下IAP的大体流程吧。</p>
 <a id="more"></a>
-<h3 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h3><p>你需要设置好你本地的计算机与远程代码仓库的SSH连接。</p>
-<h3 id="步奏："><a href="#步奏：" class="headerlink" title="步奏："></a>步奏：</h3><ul>
-<li>你需要先在<code>github</code>或者其他的<code>git</code>托管网站<code>fork</code>一份别人的代码到自己的仓库，然后<code>clone</code>到本地。  </li>
-<li>添加原作者的远程分支。用以下命令即可添加：  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add author git@XXX.git</span><br></pre></td></tr></table></figure>
-<p>然后运行<code>git remote -v</code></p>
-<p>你会发现有你的远程分支和原作者的远程分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">author	git@xxx.git (fetch)</span><br><span class="line">author	git@xxx.git (push)</span><br><span class="line">origin	git@xxx.git (fetch)</span><br><span class="line">origin	git@xxx.git (push)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>把原作者最新的更改拉到本地：   </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch author</span><br></pre></td></tr></table></figure>
-<ul>
-<li>提交之前你自己对代码所做的更改，要不然无法执行下一步骤。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;something changed&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>把原作者代码与自己本地代码合并：</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge author/master</span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果没有冲突，<code>push</code>本地仓库到自己远程的<code>fork</code>仓库。如果有冲突，解决冲突之后，再执行<code>push</code>操作。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>至此，所有的操作都已经完成。如果你觉得自己的代码值得贡献，可以<code>pull request</code>给原作者。</p>
-
+<h2 id="1-帐号准备（账户信息，用于收款之类的）"><a href="#1-帐号准备（账户信息，用于收款之类的）" class="headerlink" title="1.帐号准备（账户信息，用于收款之类的）"></a>1.帐号准备（账户信息，用于收款之类的）</h2><h2 id="2-App创建"><a href="#2-App创建" class="headerlink" title="2.App创建"></a>2.App创建</h2><h2 id="3-产品创建、定价"><a href="#3-产品创建、定价" class="headerlink" title="3.产品创建、定价"></a>3.产品创建、定价</h2><h2 id="4-开发"><a href="#4-开发" class="headerlink" title="4.开发"></a>4.开发</h2><h2 id="5-测试"><a href="#5-测试" class="headerlink" title="5.测试"></a>5.测试</h2><h1 id="push指定页面"><a href="#push指定页面" class="headerlink" title="push指定页面"></a><a href="letvsportslaunch://com.lesports.glivesports/open?className=LEPostDetailViewController&amp;postsId=1792933171460445763832338&amp;fromType=0" target="_blank" rel="external">push指定页面</a></h1><h1 id="指定tab"><a href="#指定tab" class="headerlink" title="指定tab"></a><a href="letvsportslaunch://com.lesports.glivesports/open?selectIndex=4" target="_blank" rel="external">指定tab</a></h1><h1 id="指定-tab加push"><a href="#指定-tab加push" class="headerlink" title="指定+tab加push"></a><a href="letvsportslaunch://com.lesports.glivesports/open?selectIndex=2&amp;className=LEPostDetailViewController&amp;postsId=1792933171460445763832338&amp;fromType=0" target="_blank" rel="external">指定+tab加push</a></h1><h1 id="跳转到社区主页"><a href="#跳转到社区主页" class="headerlink" title="跳转到社区主页"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=group&amp;groupId=20504" target="_blank" rel="external">跳转到社区主页</a></h1><h1 id="跳转到帖子详情"><a href="#跳转到帖子详情" class="headerlink" title="跳转到帖子详情"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=feed&amp;feedId=1792933171460445763832338" target="_blank" rel="external">跳转到帖子详情</a></h1><h1 id="跳转到比赛"><a href="#跳转到比赛" class="headerlink" title="跳转到比赛"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=race&amp;id=1005226005" target="_blank" rel="external">跳转到比赛</a></h1><h1 id="专题详情"><a href="#专题详情" class="headerlink" title="专题详情"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=topic&amp;topicId=6764" target="_blank" rel="external">专题详情</a></h1><p>#<a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=richText&amp;id=725316019" target="_blank" rel="external">富文本</a></p>
+<p>#<a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=gallery&amp;id=725073019" target="_blank" rel="external">图集</a></p>
+<h1 id="视频新闻"><a href="#视频新闻" class="headerlink" title="视频新闻"></a><a href="letvsportslaunch://com.lesports.glivesports/open?from=h5&amp;to=newsDetail&amp;id=725059019" target="_blank" rel="external">视频新闻</a></h1>
       
     </div>
 
@@ -346,6 +322,10 @@
           
             <a href="/tags/学习/" rel="tag">#学习</a>
           
+            <a href="/tags/经验/" rel="tag">#经验</a>
+          
+            <a href="/tags/支付/" rel="tag">#支付</a>
+          
         </div>
       
 
@@ -353,16 +333,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/23/MapAPI/" rel="next" title="系统地图API位置提示搜索">
-                <i class="fa fa-chevron-left"></i> 系统地图API位置提示搜索
+              <a href="/2016/03/20/hexoIgnoreRenderReadme/" rel="next" title="Hexo在部署时忽略README文件的渲染">
+                <i class="fa fa-chevron-left"></i> Hexo在部署时忽略README文件的渲染
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/09/16/DESIGNATED_INITIALIZER/" rel="prev" title="指定初始化方法并使系统初始化方法无效">
-                指定初始化方法并使系统初始化方法无效 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/24/Localized-iOS/" rel="prev" title="iOS国际化开发">
+                iOS国际化开发 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -389,8 +369,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2015/08/12/GitFork/"
-           data-title="与原作者同步Fork代码仓库" data-url="http://xiaolei0808.com/2015/08/12/GitFork/">
+      <div class="ds-thread" data-thread-key="2016/04/04/In-App-Purchase/"
+           data-title="In-App Purchase(应用内购买)" data-url="http://xiaolei0808.com/2016/04/04/In-App-Purchase/">
       </div>
     
   </div>
@@ -533,7 +513,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提："><span class="nav-number">1.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步奏："><span class="nav-number">2.</span> <span class="nav-text">步奏：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-帐号准备（账户信息，用于收款之类的）"><span class="nav-number">1.</span> <span class="nav-text">1.帐号准备（账户信息，用于收款之类的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-App创建"><span class="nav-number">2.</span> <span class="nav-text">2.App创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-产品创建、定价"><span class="nav-number">3.</span> <span class="nav-text">3.产品创建、定价</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-开发"><span class="nav-number">4.</span> <span class="nav-text">4.开发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-测试"><span class="nav-number">5.</span> <span class="nav-text">5.测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#push指定页面"><span class="nav-number"></span> <span class="nav-text">push指定页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指定tab"><span class="nav-number"></span> <span class="nav-text">指定tab</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指定-tab加push"><span class="nav-number"></span> <span class="nav-text">指定+tab加push</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跳转到社区主页"><span class="nav-number"></span> <span class="nav-text">跳转到社区主页</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跳转到帖子详情"><span class="nav-number"></span> <span class="nav-text">跳转到帖子详情</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#跳转到比赛"><span class="nav-number"></span> <span class="nav-text">跳转到比赛</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#专题详情"><span class="nav-number"></span> <span class="nav-text">专题详情</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#视频新闻"><span class="nav-number"></span> <span class="nav-text">视频新闻</span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
