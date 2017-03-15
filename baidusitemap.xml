@@ -3,6 +3,28 @@
 
     
   <url>
+    <loc>http://xiaolei0808.com/2017/03/15/iOS10-0-10-2jailbreak/</loc>
+    <lastmod>2017-03-15T03:59:51.000Z</lastmod>
+    <data>
+        <display>
+        <title>iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接</title>
+        <pubTime>2017-03-15T03:19:05.000Z</pubTime>
+        
+        <tag>iOS </tag>
+         
+        <tag>Jailbreak </tag>
+         
+         
+           
+             
+              <breadCrumb title="Jailbreak" url="http://xiaolei0808.com/categories/Jailbreak/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://xiaolei0808.com/2017/03/03/MacToolsSoftware/</loc>
     <lastmod>2017-03-03T07:12:20.000Z</lastmod>
     <data>
@@ -54,9 +76,9 @@
         <title>使用CocoaPods管理第三方库</title>
         <pubTime>2015-04-21T07:11:36.000Z</pubTime>
         
-        <tag>iOS </tag>
-         
         <tag>学习 </tag>
+         
+        <tag>iOS </tag>
          
          
            
@@ -167,9 +189,9 @@
         <title>Swift中的闭包(Closures)</title>
         <pubTime>2015-03-27T02:52:48.000Z</pubTime>
         
-        <tag>iOS </tag>
-         
         <tag>学习 </tag>
+         
+        <tag>iOS </tag>
          
         <tag>Swift </tag>
          
@@ -193,9 +215,9 @@
         <title>SQLite和SQL</title>
         <pubTime>2015-04-02T03:00:31.000Z</pubTime>
         
-        <tag>iOS </tag>
-         
         <tag>学习 </tag>
+         
+        <tag>iOS </tag>
          
         <tag>SQL </tag>
          
@@ -415,9 +437,9 @@
         <title>解决DrawInRect绘图不清晰的问题</title>
         <pubTime>2015-04-08T10:46:44.000Z</pubTime>
         
-        <tag>iOS </tag>
-         
         <tag>学习 </tag>
+         
+        <tag>iOS </tag>
          
          
            
@@ -459,9 +481,9 @@
         <title>iOS中Push功能的实现</title>
         <pubTime>2015-04-14T06:15:59.000Z</pubTime>
         
-        <tag>iOS </tag>
-         
         <tag>学习 </tag>
+         
+        <tag>iOS </tag>
          
          
            

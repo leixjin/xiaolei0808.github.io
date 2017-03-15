@@ -45,7 +45,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hi. I'm Mr.King." />
+  <meta name="keywords" content="iOS,Jailbreak," />
 
 
 
@@ -61,15 +61,19 @@
 
 
 
-<meta name="description" content="Mr.King’s Blog.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr.King’s Blog">
-<meta property="og:url" content="http://xiaolei0808.com/page/3/index.html">
+<meta name="description" content="最近搞了一下 iOS 10 的越狱，然后在 SSH 连接的时候遇到了一个小坑。在 iOS 10 之前，越狱之后需要手动安装 OpenSSH，以此达到通过 SSH 连接 iPhone 的目的。但是此次的越狱，作者竟然内置了 OpenSSH，所以就不需要再另外安装。但是小哥默认禁用了 SSH 连接，需要我们手动进行开启。
+下面，说一下具体操作步骤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接">
+<meta property="og:url" content="http://xiaolei0808.com/2017/03/15/iOS10-0-10-2jailbreak/index.html">
 <meta property="og:site_name" content="Mr.King’s Blog">
-<meta property="og:description" content="Mr.King’s Blog.">
+<meta property="og:description" content="最近搞了一下 iOS 10 的越狱，然后在 SSH 连接的时候遇到了一个小坑。在 iOS 10 之前，越狱之后需要手动安装 OpenSSH，以此达到通过 SSH 连接 iPhone 的目的。但是此次的越狱，作者竟然内置了 OpenSSH，所以就不需要再另外安装。但是小哥默认禁用了 SSH 连接，需要我们手动进行开启。
+下面，说一下具体操作步骤。">
+<meta property="og:updated_time" content="2017-03-15T03:59:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr.King’s Blog">
-<meta name="twitter:description" content="Mr.King’s Blog.">
+<meta name="twitter:title" content="iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接">
+<meta name="twitter:description" content="最近搞了一下 iOS 10 的越狱，然后在 SSH 连接的时候遇到了一个小坑。在 iOS 10 之前，越狱之后需要手动安装 OpenSSH，以此达到通过 SSH 连接 iPhone 的目的。但是此次的越狱，作者竟然内置了 OpenSSH，所以就不需要再另外安装。但是小哥默认禁用了 SSH 连接，需要我们手动进行开启。
+下面，说一下具体操作步骤。">
 
 
 
@@ -87,7 +91,7 @@
   };
 </script>
 
-  <title> Mr.King’s Blog </title>
+  <title> iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接 | Mr.King’s Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,9 +131,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -216,9 +218,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -238,10 +240,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2015/04/02/SQLiteAndSQL/" itemprop="url">
-                  SQLite和SQL
-                </a>
+                iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接
               
             
           </h1>
@@ -253,8 +252,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-02T11:00:31+08:00" content="2015-04-02">
-              2015-04-02
+            <time itemprop="dateCreated" datetime="2017-03-15T11:19:05+08:00" content="2017-03-15">
+              2017-03-15
             </time>
           </span>
 
@@ -267,8 +266,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/SQL/" itemprop="url" rel="index">
-                    <span itemprop="name">SQL</span>
+                  <a href="/categories/Jailbreak/" itemprop="url" rel="index">
+                    <span itemprop="name">Jailbreak</span>
                   </a>
                 </span>
 
@@ -283,8 +282,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2015/04/02/SQLiteAndSQL/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/04/02/SQLiteAndSQL/" itemprop="commentsCount"></span>
+                <a href="/2017/03/15/iOS10-0-10-2jailbreak/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/15/iOS10-0-10-2jailbreak/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -306,276 +305,76 @@
       
 
       
-        
-          <p>在移动项目开发中<em>(这里特指<code>iOS</code>开发)</em>，通常都会接触到各种数据。对于少量、简单的数据，我们可以用归档、偏好设置或者pilst存储。但是如果遇到了大量的、复杂的数据，前面的几种方法就不太适合了。如果偏要用也不是不可以，但是会或多或少的造成性能的问题。对于复杂数据，最好使用数据库来存储。在移动项目开发中通常使用嵌入式数据库，因为这种数据库轻量级、效率高。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/04/02/SQLiteAndSQL/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>最近搞了一下 iOS 10 的越狱，然后在 SSH 连接的时候遇到了一个小坑。在 iOS 10 之前，越狱之后需要手动安装 OpenSSH，以此达到通过 SSH 连接 iPhone 的目的。但是此次的越狱，作者竟然内置了 OpenSSH，所以就不需要再另外安装。但是小哥默认禁用了 SSH 连接，需要我们手动进行开启。</p>
+<p>下面，说一下具体操作步骤。</p>
+<a id="more"></a>
+<h2 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h2><p>1.越狱(废话=。=国内可以用 PP 助手傻瓜式越狱，此次越狱为不完美越狱，每次重启都要重新越狱，有点蛋疼)。</p>
+<p>2.在 Cydia 中搜索 Filza 并安装，也可以在电脑端安装 iFunBox 工具。此步骤的主要目的是为了修改越狱工具中的一个文件。</p>
+<p>3.用上述两个工具其中之一，进入以下路径：<strong>/private/var/containers/Bundle/Application/yalu102/yalu102.app/</strong></p>
+<p>4.用文本编辑器打开 <strong>dropbear.plist</strong> 文件。</p>
+<p>5.替换 <strong>127.0.0.1:22</strong> 为 <strong>22</strong>。</p>
+<p>6.重启设备，重新使用越狱工具恢复越狱。</p>
+<blockquote>
+<p><strong>注：越狱之后一定不要再装 OpenSSH 了，已经安装过的可以卸载掉。不然无法通过 WIFI 进行 SSH 连接。</strong></p>
+</blockquote>
+<p>经过以上步骤，就可以愉快的使用终端通过 WIFI 连接你的 iPhone 了。</p>
+<p>连接方法：<strong>ssh root@&lt;#iPhone IP Address#&gt;</strong><br>默认密码：<strong>alpine</strong></p>
+<blockquote>
+<p>强烈建议连接之后的第一件事就是修改密码，防止不法分子通过 WiFi 窃取你的个人信息。</p>
+</blockquote>
+<h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><p><em>依次在终端输入：</em><br><strong>su root</strong><br><em>然后按提示输入当前密码</em><br><strong>passwd</strong><br><em>输入新密码</em><br><em>确认新密码</em><br><em>密码修改完成</em></p>
+<p>Well Done, Enjoy!</p>
+<blockquote>
+<p>参考：<br><a href="https://yalujailbreak.net/ssh-ios-10-tutorial/" target="_blank" rel="external">Blog</a><br><a href="https://www.youtube.com/watch?v=TJKcHWrmzlo" target="_blank" rel="external">YouTubeAddress</a></p>
+</blockquote>
+
       
     </div>
 
     <div>
       
+        
+      
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/27/SwiftClosures/" itemprop="url">
-                  Swift中的闭包(Closures)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-03-27T10:52:48+08:00" content="2015-03-27">
-              2015-03-27
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Swift/" itemprop="url" rel="index">
-                    <span itemprop="name">Swift</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
-
+            <a href="/tags/Jailbreak/" rel="tag">#Jailbreak</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/03/27/SwiftClosures/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/27/SwiftClosures/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          Swift中的闭包和OC中的Blocks有着异曲同工之妙，善于利用，能够大大减少代码量，提高工作效率，对解耦有着很大的帮助。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/03/27/SwiftClosures/">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/03/MacToolsSoftware/" rel="next" title="Mac 常用工具类软件整理">
+                <i class="fa fa-chevron-left"></i> Mac 常用工具类软件整理
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2015/03/20/ToSelf/" itemprop="url">
-                  跟自己做个了断吧
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-03-20T19:45:43+08:00" content="2015-03-20">
-              2015-03-20
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生活/" itemprop="url" rel="index">
-                    <span itemprop="name">生活</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/03/20/ToSelf/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/03/20/ToSelf/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          对于我这二十几年的回想与总结。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/03/20/ToSelf/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -583,6 +382,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/15/iOS10-0-10-2jailbreak/"
+           data-title="iOS10.0~10.2 越狱之后通过 WIFI 进行 SSH 连接" data-url="http://xiaolei0808.com/2017/03/15/iOS10-0-10-2jailbreak/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -602,8 +409,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -702,6 +518,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤："><span class="nav-number">1.</span> <span class="nav-text">步骤：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改密码"><span class="nav-number">2.</span> <span class="nav-text">修改密码</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -804,6 +637,167 @@
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
