@@ -5,11 +5,14 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
 
 
 
@@ -23,6 +26,9 @@
 
 
 
+
+
+
   <meta name="baidu-site-verification" content="EcaQ5pADGr" />
 
 
@@ -31,30 +37,57 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hi. I'm Mr.King." />
 
 
 
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hi. I'm Mr.King. 好男人就是我，我就是金小白。" />
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -73,21 +106,37 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: undefined,
+      userId: 'undefined',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> 归档 | Mr.King’s Blog </title>
+
+
+  <link rel="canonical" href="http://xiaolei0808.com/archives/"/>
+
+
+
+
+
+  <title>归档 | Mr.King’s Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -95,11 +144,13 @@
   
 
 
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-61499702-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -109,11 +160,14 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?61de9d3c97ec984c84513a0c54b6a79a";
+      hm.src = "https://hm.baidu.com/hm.js?61de9d3c97ec984c84513a0c54b6a79a";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
+
 
 
 
@@ -127,29 +181,33 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left  page-archive  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Mr.King’s Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mr.King’s Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">所谓迷茫，不过是你的才华配不上你的梦想。</p>
+      
   </div>
-  <p class="site-subtitle">所谓迷茫，不过是你的才华配不上你的梦想。</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -162,7 +220,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -172,7 +230,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -182,7 +240,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -192,7 +250,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -205,6 +263,8 @@
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -246,7 +306,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2017/04/20/duoshuo-bye/" itemprop="url">
               
@@ -254,7 +314,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -283,7 +343,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2017/03/15/iOS10-0-10-2jailbreak/" itemprop="url">
               
@@ -291,7 +351,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -320,7 +380,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2017/03/03/MacToolsSoftware/" itemprop="url">
               
@@ -328,7 +388,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -362,7 +422,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2016/04/24/Localized-iOS/" itemprop="url">
               
@@ -370,7 +430,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -399,7 +459,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2016/03/20/hexoIgnoreRenderReadme/" itemprop="url">
               
@@ -407,7 +467,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -441,7 +501,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2015/12/13/MacUpdateGit/" itemprop="url">
               
@@ -449,7 +509,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -478,7 +538,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2015/09/25/RuntimeNavPop/" itemprop="url">
               
@@ -486,7 +546,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -515,7 +575,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2015/09/22/Xcode7Fold/" itemprop="url">
               
@@ -523,7 +583,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -552,7 +612,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2015/09/16/DESIGNATED_INITIALIZER/" itemprop="url">
               
@@ -560,7 +620,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -589,7 +649,7 @@
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h1 class="post-title">
+      <h2 class="post-title">
         
             <a class="post-title-link" href="/2015/08/12/GitFork/" itemprop="url">
               
@@ -597,7 +657,7 @@
               
             </a>
         
-      </h1>
+      </h2>
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
@@ -649,34 +709,43 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="金小白" />
           <p class="site-author-name" itemprop="name">金小白</p>
-          <p class="site-description motion-element" itemprop="description">金小白的个人博客.</p>
+           
+              <p class="site-description motion-element" itemprop="description">金小白的个人博客.</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -691,34 +760,38 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/xiaolei0808" target="_blank">
+                <a href="https://github.com/xiaolei0808" target="_blank" title="GitHub">
                   
-                    <i class="fa fa-github"></i> GitHub
+                    <i class="fa fa-fw fa-github"></i>
                   
+                  GitHub
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/xiaolei0808" target="_blank">
+                <a href="https://twitter.com/xiaolei0808" target="_blank" title="Twitter">
                   
-                    <i class="fa fa-twitter"></i> Twitter
+                    <i class="fa fa-fw fa-twitter"></i>
                   
+                  Twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/xiaolei0808" target="_blank">
+                <a href="http://weibo.com/xiaolei0808" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-weibo"></i> Weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  Weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/xiaolei0808" target="_blank">
+                <a href="http://www.zhihu.com/people/xiaolei0808" target="_blank" title="ZhiHu">
                   
-                    <i class="fa fa-globe"></i> ZhiHu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  ZhiHu
                 </a>
               </span>
             
@@ -729,24 +802,32 @@
         
 
         
-        <div class="links-of-blogroll motion-element">
-          
-            <div class="links-of-blogroll-title">友情链接</div>
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" target="_blank">MacTalk</a>
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.51up.club" target="_blank">木糖醇</a>
+                  <a href="http://www.51up.tech/" title="木糖醇" target="_blank">木糖醇</a>
                 </li>
               
             </ul>
-          
-        </div>
+          </div>
+        
+
+        
+
 
       </section>
+
+      
 
       
 
@@ -771,8 +852,9 @@
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -801,21 +883,22 @@
 
 
 
+        
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
-
-
-  
-
-
-
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -824,25 +907,56 @@
 </script>
 
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
 
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
 
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+  
 
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
 
 
 
@@ -860,7 +974,29 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://xiaolei0808.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
+
+
+
+	
+
+
 
 
 
@@ -868,35 +1004,32 @@
 
 
 
+
+
   
 
-    <script type="text/javascript">
-      var disqus_shortname = 'xiaolei0808';
-      var disqus_identifier = 'archives/index.html';
-      var disqus_title = '';
-      var disqus_url = '';
 
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
 
-      run_disqus_script('count.js');
-      
-    </script>
+
+
+
+
+
   
 
 
 
+
+
   
-  
+
   
 
   
 
+  
+
+  
 
 </body>
 </html>

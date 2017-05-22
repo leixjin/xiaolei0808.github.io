@@ -5,11 +5,14 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
 
 
 
@@ -23,6 +26,9 @@
 
 
 
+
+
+
   <meta name="baidu-site-verification" content="EcaQ5pADGr" />
 
 
@@ -31,30 +37,57 @@
 
 
 
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
 
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hi. I'm Mr.King." />
 
 
 
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hi. I'm Mr.King. 好男人就是我，我就是金小白。" />
 
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -73,21 +106,37 @@
 
 
 
-<script type="text/javascript" id="hexo.configuration">
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
+    root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post"},
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
-      userId: undefined,
+      userId: 'undefined',
       author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
   };
 </script>
 
-  <title> Mr.King’s Blog </title>
+
+
+  <link rel="canonical" href="http://xiaolei0808.com/page/2/"/>
+
+
+
+
+
+  <title>Mr.King’s Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -95,11 +144,13 @@
   
 
 
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-61499702-1', 'auto');
   ga('send', 'pageview');
 </script>
@@ -109,11 +160,14 @@
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?61de9d3c97ec984c84513a0c54b6a79a";
+      hm.src = "https://hm.baidu.com/hm.js?61de9d3c97ec984c84513a0c54b6a79a";
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
+
+
 
 
 
@@ -127,31 +181,35 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
+  <div class="container sidebar-position-left 
    page-home 
  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Mr.King’s Blog</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Mr.King’s Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">所谓迷茫，不过是你的才华配不上你的梦想。</p>
+      
   </div>
-  <p class="site-subtitle">所谓迷茫，不过是你的才华配不上你的梦想。</p>
-</div>
 
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
 <nav class="site-nav">
@@ -164,7 +222,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
           </a>
@@ -174,7 +232,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -184,7 +242,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
           </a>
@@ -194,7 +252,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
             标签
           </a>
@@ -207,6 +265,8 @@
 
   
 </nav>
+
+
 
  </div>
     </header>
@@ -221,13 +281,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/07/23/MapAPI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -235,38 +305,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/23/MapAPI/" itemprop="url">
-                  系统地图API位置提示搜索
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/23/MapAPI/" itemprop="url">系统地图API位置提示搜索</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-23T15:29:55+08:00" content="2015-07-23">
-              2015-07-23
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-23T15:29:55+08:00">
+                2015-07-23
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -274,7 +348,6 @@
 
                 
                 
-
               
             </span>
           
@@ -282,23 +355,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/23/MapAPI/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/23/MapAPI/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/07/23/MapAPI/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -309,11 +389,13 @@
         
           <p>最近需要做一个带有位置搜索功能的界面，具体需求就是输入一个位置，能够自动联想出一串与之匹配的地名，供用户选择。在实际应用中，有许多APP都具有此类功能，比如微信朋友圈或者QQ空间的状态的位置，可以自动定位或手动输入，手动输入的时候会根据输入文字的变化，展示一个位置列表。</p>
 <p>想实现这个功能，且不导入第三方的SDK（如果导入第三方地图SDK，会使应用安装包增加10M左右），使用iOS系统自带的高德地图API就能够轻松办到。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/23/MapAPI/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -322,7 +404,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -339,13 +431,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/07/18/UIDisplaySearchController/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -353,38 +455,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/18/UIDisplaySearchController/" itemprop="url">
-                  纯代码创建UIDisplaySearchController遇到的问题
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/18/UIDisplaySearchController/" itemprop="url">纯代码创建UIDisplaySearchController遇到的问题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-18T00:46:09+08:00" content="2015-07-18">
-              2015-07-18
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-18T00:46:09+08:00">
+                2015-07-18
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -392,7 +498,6 @@
 
                 
                 
-
               
             </span>
           
@@ -400,23 +505,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/18/UIDisplaySearchController/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/18/UIDisplaySearchController/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/07/18/UIDisplaySearchController/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -426,11 +538,13 @@
       
         
           <p>这两天需要在程序原有的界面上增加一个搜索地理位置，根据用户选择的地理位置获取对应地点的相关职位的功能。很显然这种界面大家所普遍使用的就是<code>UISearchBar</code>+<code>UISearchDisplayController</code>，这种苹果官方的效果不仅很省空间，而且动画以及显示效果都很美观。很早以前就知道有这样一个控件，但是没有用过，今天看了一下API文档，很平常的使用方法：</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/18/UIDisplaySearchController/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -439,7 +553,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -456,13 +580,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/07/16/Xcode6-XSum/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -470,38 +604,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/16/Xcode6-XSum/" itemprop="url">
-                  Xcode6.X手动安装低版本模拟器
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/16/Xcode6-XSum/" itemprop="url">Xcode6.X手动安装低版本模拟器</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-16T17:17:52+08:00" content="2015-07-16">
-              2015-07-16
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-16T17:17:52+08:00">
+                2015-07-16
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -509,7 +647,6 @@
 
                 
                 
-
               
             </span>
           
@@ -517,23 +654,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/16/Xcode6-XSum/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/16/Xcode6-XSum/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/07/16/Xcode6-XSum/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -543,11 +687,13 @@
       
         
           <p>随着iOS版本的不断更新，用户手机里的iOS系统版本也不尽相同。虽然iOS9的公测版以及各种beta版本早已发布，但是根据我APP后台的系统版本分布的统计数据显示，仍然有一小部分用户坚持着iOS7以及以下版本的系统。当然了，iPhone4用户可以升级的最高版本就是iOS7.12，纵使他们想升级也无能为力了。虽然使用低版本系统的用户只占很少一部分，但是我们也不能无情的抛弃他们，不是么？所以，我们需要在程序设计的过程中，充分考虑到版本的不同而带来的代码编写上的差异，以便做好多版本的适配。iOS7和iOS8在API方面还是有很多差异的，详情可以参考官方文档，这里就不再赘述，本篇讲述的主要问题是如何在<code>Xcode6.X</code>中安装各种不同版本的模拟器。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/16/Xcode6-XSum/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -556,7 +702,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -573,13 +729,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/07/14/NavBackItem/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -587,38 +753,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/07/14/NavBackItem/" itemprop="url">
-                  自定义导航栏的返回按钮标题
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/07/14/NavBackItem/" itemprop="url">自定义导航栏的返回按钮标题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-07-14T21:32:44+08:00" content="2015-07-14">
-              2015-07-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-07-14T21:32:44+08:00">
+                2015-07-14
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -626,7 +796,6 @@
 
                 
                 
-
               
             </span>
           
@@ -634,23 +803,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/07/14/NavBackItem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/07/14/NavBackItem/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/07/14/NavBackItem/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -662,11 +838,13 @@
           <p>在iOS开发中，导航栏的定制是开发人员经常要做的事情，不过有的情况下，使用苹果官方自带的效果也很不错。苹果对导航栏的封装，让开发者省了不少事情。就比如说导航栏的返回按钮，它的标题会自动的显示为上一级控制器的<code>title</code>的内容，但是如果上一级的标题过长，它便会自动的变成“返回”两个字。有的时候，返回按钮的字太多也会影响美观，所以改变返回按钮的标题也是一种需求。但是如果你尝试着在当前控制器更改返回按钮的标题：</p>
 <figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">self</span>.navigationItem.backBarButtonItem.title = <span class="string">@"xxx"</span>;</span><br></pre></td></tr></table></figure>
 <p>你会发现，这样做并没有什么用。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/07/14/NavBackItem/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -675,7 +853,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -692,13 +880,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/05/20/XcodePlugin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -706,38 +904,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/05/20/XcodePlugin/" itemprop="url">
-                  Xcode常用插件整理
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/05/20/XcodePlugin/" itemprop="url">Xcode常用插件整理</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-05-20T17:02:47+08:00" content="2015-05-20">
-              2015-05-20
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-05-20T17:02:47+08:00">
+                2015-05-20
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -745,7 +947,6 @@
 
                 
                 
-
               
             </span>
           
@@ -753,23 +954,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/05/20/XcodePlugin/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/05/20/XcodePlugin/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/05/20/XcodePlugin/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -779,11 +987,13 @@
       
         
           <p>最近在忙毕业设计和其他一些琐碎的事情，算算大概得有一个月没更新博客了，真是罪过啊罪过。好了，下面开始正文。  </p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/05/20/XcodePlugin/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -792,7 +1002,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -809,13 +1029,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/04/21/CocoaPods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -823,38 +1053,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/04/21/CocoaPods/" itemprop="url">
-                  使用CocoaPods管理第三方库
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/04/21/CocoaPods/" itemprop="url">使用CocoaPods管理第三方库</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-21T15:11:36+08:00" content="2015-04-21">
-              2015-04-21
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-21T15:11:36+08:00">
+                2015-04-21
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -862,7 +1096,6 @@
 
                 
                 
-
               
             </span>
           
@@ -870,23 +1103,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/04/21/CocoaPods/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/04/21/CocoaPods/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/21/CocoaPods/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -896,11 +1136,13 @@
       
         
           <p>开发应用程序，不可避免的会使用到第三方库，时间久了，需要引用的第三方库就会慢慢多起来，如果每一个库都去手动添加、升级、管理，虽然很简单，但是却没什么技术含量，管理这些库花费的都是不必要的时间。如果能有一款工具可以自动去管理这些第三方库，岂不是更好。最近研究了一下<strong>CocoaPods</strong>，用了之后发现以前自己浪费了好多时间在配置各种第三方库上面。有了<strong>CocoaPods</strong>之后，只需要在<strong>Podfile</strong>文件中写入对应的库，它便会自动把库下载下来并且设置好所需的系统依赖和编译参数，能大大节省不必要的时间，对提升开发效率有很大的帮助。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/21/CocoaPods/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -909,7 +1151,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -926,13 +1178,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/04/14/iOSPush/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -940,38 +1202,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/04/14/iOSPush/" itemprop="url">
-                  iOS中Push功能的实现
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/04/14/iOSPush/" itemprop="url">iOS中Push功能的实现</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-14T14:15:59+08:00" content="2015-04-14">
-              2015-04-14
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-14T14:15:59+08:00">
+                2015-04-14
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -979,7 +1245,6 @@
 
                 
                 
-
               
             </span>
           
@@ -987,23 +1252,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/04/14/iOSPush/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/04/14/iOSPush/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/14/iOSPush/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1013,11 +1285,13 @@
       
         
           最近老板又开始给安排活了，让做推送，以前没做过这个，这两天研究了相关的技术。做完之后总结了一下相关的经验和坑点，让自己巩固巩固知识，也顺便帮助下还没入坑的同学们。总的来说苹果的推送实现起来不用费多大力气，只要细心点就可以轻松完成任务。
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/14/iOSPush/">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1026,7 +1300,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1043,13 +1327,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/04/11/Traver-Qingtianhe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -1057,38 +1351,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/04/11/Traver-Qingtianhe/" itemprop="url">
-                  小游青天河
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/04/11/Traver-Qingtianhe/" itemprop="url">小游青天河</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-11T12:36:41+08:00" content="2015-04-11">
-              2015-04-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-11T12:36:41+08:00">
+                2015-04-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/生活/" itemprop="url" rel="index">
                     <span itemprop="name">生活</span>
                   </a>
@@ -1096,7 +1394,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1104,23 +1401,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/04/11/Traver-Qingtianhe/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/04/11/Traver-Qingtianhe/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/11/Traver-Qingtianhe/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1130,11 +1434,13 @@
       
         
           你的思想就如同泉水，当它平静下来，答案就清澈见底了。</br>春天到了，花开了，草绿了，人也精神了，挑一个阳光明媚的天气，带着心爱的姑娘，去游个山玩个水，岂不美哉、快哉？</br>下面，就让我们开始踏春之旅吧…
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/11/Traver-Qingtianhe/">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1143,7 +1449,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1160,13 +1476,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/04/11/HexoFix/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -1174,38 +1500,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/04/11/HexoFix/" itemprop="url">
-                  Hexo遇到的坑
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/04/11/HexoFix/" itemprop="url">Hexo遇到的坑</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-11T11:37:52+08:00" content="2015-04-11">
-              2015-04-11
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-11T11:37:52+08:00">
+                2015-04-11
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/经验/" itemprop="url" rel="index">
                     <span itemprop="name">经验</span>
                   </a>
@@ -1213,7 +1543,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1221,23 +1550,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/04/11/HexoFix/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/04/11/HexoFix/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/11/HexoFix/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1248,11 +1584,13 @@
         
           <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>前两天写上篇博文<em>（<a href="http://xiaolei0808.com/2015/04/08/%E8%A7%A3%E5%86%B3DrawInRect%E7%BB%98%E5%9B%BE%E4%B8%8D%E6%B8%85%E6%99%B0%E7%9A%84%E9%97%AE%E9%A2%98/">解决DrawInRect绘图不清晰的问题</a>）</em>的时候其实我是写了一大堆的，但是HEXO生成的时候却卡在那里了，找了半天，发现把原来的这篇删了之后生成的飞快<em>(不到1s就可以了)</em>。所以我怀疑是博文内容的问题，找来找去，发现如果把代码注释掉，那速度也是飞快的。但是虽然当时知道是代码有问题，但是却找不到为什么写几行代码就会生成的死慢，无奈就把博文精简再精简，最后只剩下2行代码了<em>(所以其实不是我懒，是因为遇到了坑)</em>，就这还是花了9s多才生成好，无奈之下就先把文章传上去了。</p>
 <p>然后今天有点闲，专门花了时间解决这个问题，终于发现了问题所在。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/11/HexoFix/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1261,7 +1599,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1278,13 +1626,23 @@
       
 
   
-  
 
   
   
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/04/08/DrawInRectWater/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="金小白">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.King’s Blog">
+    </span>
 
     
       <header class="post-header">
@@ -1292,38 +1650,42 @@
         
         
           <h1 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2015/04/08/DrawInRectWater/" itemprop="url">
-                  解决DrawInRect绘图不清晰的问题
-                </a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2015/04/08/DrawInRectWater/" itemprop="url">解决DrawInRect绘图不清晰的问题</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-04-08T18:46:44+08:00" content="2015-04-08">
-              2015-04-08
-            </time>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-04-08T18:46:44+08:00">
+                2015-04-08
+              </time>
+            
+
+            
+
+            
           </span>
 
           
             <span class="post-category" >
-              &nbsp; | &nbsp;
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/iOS/" itemprop="url" rel="index">
                     <span itemprop="name">iOS</span>
                   </a>
@@ -1331,7 +1693,6 @@
 
                 
                 
-
               
             </span>
           
@@ -1339,23 +1700,30 @@
           
             
               <span class="post-comments-count">
-                &nbsp; | &nbsp;
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
                 <a href="/2015/04/08/DrawInRectWater/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/04/08/DrawInRectWater/" itemprop="commentsCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2015/04/08/DrawInRectWater/" itemprop="commentCount"></span>
                 </a>
               </span>
             
           
 
           
+          
 
           
+
+          
+
           
 
         </div>
       </header>
     
-
 
     <div class="post-body" itemprop="articleBody">
 
@@ -1365,11 +1733,13 @@
       
         
           <p>最近在做的项目有个需求，在分享的图片上加上公司的水印。我一想这不是分分钟的事情么，刷刷刷的就给写好了。然后得到图片一看，傻眼了，卧槽为什么这图片跟打了马赛克一样？百思不得其解啊，只好求助Google大神了，经过几番寻找，终于被我找到了解决办法，原来是Scale这个小妖精在作怪。</p>
-          <div class="post-more-link text-center">
+          <!--noindex-->
+          <div class="post-button text-center">
             <a class="btn" href="/2015/04/08/DrawInRectWater/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1378,7 +1748,17 @@
       
     </div>
 
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+
       
 
       
@@ -1426,34 +1806,43 @@
 
       
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
                alt="金小白" />
           <p class="site-author-name" itemprop="name">金小白</p>
-          <p class="site-description motion-element" itemprop="description">金小白的个人博客.</p>
+           
+              <p class="site-description motion-element" itemprop="description">金小白的个人博客.</p>
+          
         </div>
         <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">23</span>
-              <span class="site-state-item-name">日志</span>
-            </a>
-          </div>
 
           
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">分类</span>
-              
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
             <div class="site-state-item site-state-tags">
-              <a href="/tags">
+              <a href="/tags/index.html">
                 <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
@@ -1468,34 +1857,38 @@
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/xiaolei0808" target="_blank">
+                <a href="https://github.com/xiaolei0808" target="_blank" title="GitHub">
                   
-                    <i class="fa fa-github"></i> GitHub
+                    <i class="fa fa-fw fa-github"></i>
                   
+                  GitHub
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://twitter.com/xiaolei0808" target="_blank">
+                <a href="https://twitter.com/xiaolei0808" target="_blank" title="Twitter">
                   
-                    <i class="fa fa-twitter"></i> Twitter
+                    <i class="fa fa-fw fa-twitter"></i>
                   
+                  Twitter
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/xiaolei0808" target="_blank">
+                <a href="http://weibo.com/xiaolei0808" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-weibo"></i> Weibo
+                    <i class="fa fa-fw fa-weibo"></i>
                   
+                  Weibo
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/xiaolei0808" target="_blank">
+                <a href="http://www.zhihu.com/people/xiaolei0808" target="_blank" title="ZhiHu">
                   
-                    <i class="fa fa-globe"></i> ZhiHu
+                    <i class="fa fa-fw fa-globe"></i>
                   
+                  ZhiHu
                 </a>
               </span>
             
@@ -1506,24 +1899,32 @@
         
 
         
-        <div class="links-of-blogroll motion-element">
-          
-            <div class="links-of-blogroll-title">友情链接</div>
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
             <ul class="links-of-blogroll-list">
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://macshuo.com/" target="_blank">MacTalk</a>
+                  <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://www.51up.club" target="_blank">木糖醇</a>
+                  <a href="http://www.51up.tech/" title="木糖醇" target="_blank">木糖醇</a>
                 </li>
               
             </ul>
-          
-        </div>
+          </div>
+        
+
+        
+
 
       </section>
+
+      
 
       
 
@@ -1548,8 +1949,9 @@
   &nbsp;&nbsp;|&nbsp;&nbsp;<span><a href="/baidusitemap.xml">百度网站地图</a></span>
 </div>
 
+
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -1578,21 +1980,22 @@
 
 
 
+        
+
+        
       </div>
     </footer>
 
-    <div class="back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </div>
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
   </div>
 
   
-
-
-  
-
-
-
 
 <script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
@@ -1601,73 +2004,123 @@
 </script>
 
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
 
 
 
-  
-  
 
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
 
 
 
   
 
 
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'xiaolei0808';
-      var disqus_identifier = 'page/2/index.html';
-      var disqus_title = '';
-      var disqus_url = '';
-
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-      
-    </script>
   
 
 
 
+
+
+
+
+
+
+
+
   
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
   
   
 
   
 
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://xiaolei0808.disqus.com/count.js" async></script>
+    
+
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
 
 </body>
 </html>
