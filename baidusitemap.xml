@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://xiaolei0808.com/2015/09/22/Xcode7Fold/</loc>
+    <lastmod>2017-05-22T07:50:08.000Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode7代码折叠</title>
+        <pubTime>2015-09-22T14:56:13.000Z</pubTime>
+        
+        <tag>经验 </tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://xiaolei0808.com/2017/04/20/duoshuo-bye/</loc>
@@ -266,26 +286,6 @@
         <tag>经验 </tag>
          
         <tag>小技巧 </tag>
-         
-         
-           
-             
-              <breadCrumb title="iOS" url="http://xiaolei0808.com/categories/iOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://xiaolei0808.com/2015/09/22/Xcode7Fold/</loc>
-    <lastmod>2015-09-22T14:58:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>Xcode7代码折叠</title>
-        <pubTime>2015-09-22T14:56:13.000Z</pubTime>
-        
-        <tag>经验 </tag>
          
          
            
