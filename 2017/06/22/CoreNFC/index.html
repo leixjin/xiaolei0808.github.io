@@ -94,16 +94,23 @@
 
 
 
-<meta name="description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
+<meta name="description" content="随着 WWDC 2017 的落幕，一大批新的技术(像 ARKit、Core ML、Core NFC 等等……)开始逐渐为开发者所知。开发者们又有了新的玩具可以玩一阵子了~
+这篇文章就单独拿 Core NFC 来说吧，毕竟它和我们的生活紧密相关。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="与原作者同步Fork代码仓库">
-<meta property="og:url" content="http://xiaolei0808.com/2015/08/12/GitFork/index.html">
+<meta property="og:title" content="Core NFC 初体验">
+<meta property="og:url" content="http://xiaolei0808.com/2017/06/22/CoreNFC/index.html">
 <meta property="og:site_name" content="Mr.King’s Blog">
-<meta property="og:description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
-<meta property="og:updated_time" content="2016-03-19T14:16:58.000Z">
+<meta property="og:description" content="随着 WWDC 2017 的落幕，一大批新的技术(像 ARKit、Core ML、Core NFC 等等……)开始逐渐为开发者所知。开发者们又有了新的玩具可以玩一阵子了~
+这篇文章就单独拿 Core NFC 来说吧，毕竟它和我们的生活紧密相关。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1688625-0962d5881300e923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000">
+<meta property="og:image" content="https://i.stack.imgur.com/ENL6P.png">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1196804-937b3d5dcb2237bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-06-22T06:39:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="与原作者同步Fork代码仓库">
-<meta name="twitter:description" content="今天遇到了一个问题，前几天在远程仓库fork了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用git的经验，所以费了点时间，最终还是顺利解决了。">
+<meta name="twitter:title" content="Core NFC 初体验">
+<meta name="twitter:description" content="随着 WWDC 2017 的落幕，一大批新的技术(像 ARKit、Core ML、Core NFC 等等……)开始逐渐为开发者所知。开发者们又有了新的玩具可以玩一阵子了~
+这篇文章就单独拿 Core NFC 来说吧，毕竟它和我们的生活紧密相关。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1688625-0962d5881300e923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000">
 
 
 
@@ -131,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://xiaolei0808.com/2015/08/12/GitFork/"/>
+  <link rel="canonical" href="http://xiaolei0808.com/2017/06/22/CoreNFC/"/>
 
 
 
 
 
-  <title>与原作者同步Fork代码仓库 | Mr.King’s Blog</title>
+  <title>Core NFC 初体验 | Mr.King’s Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +293,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2015/08/12/GitFork/">
+    <link itemprop="mainEntityOfPage" href="http://xiaolei0808.com/2017/06/22/CoreNFC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="金小白">
@@ -303,7 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">与原作者同步Fork代码仓库</h1>
+          <h1 class="post-title" itemprop="name headline">Core NFC 初体验</h1>
         
 
         <div class="post-meta">
@@ -315,8 +322,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-08-12T22:35:56+08:00">
-                2015-08-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-22T13:53:06+08:00">
+                2017-06-22
               </time>
             
 
@@ -338,8 +345,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
                   </a>
                 </span>
 
@@ -356,9 +363,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2015/08/12/GitFork/#comments" itemprop="discussionUrl">
+                <a href="/2017/06/22/CoreNFC/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2015/08/12/GitFork/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/06/22/CoreNFC/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -383,34 +390,69 @@
       
 
       
-        <p>今天遇到了一个问题，前几天在远程仓库<code>fork</code>了一份别人的代码，然后今天作者提交了一些更改，我想把他的更新同步到自己的仓库，因为以前没有团队使用<code>git</code>的经验，所以费了点时间，最终还是顺利解决了。</p>
+        <p>随着 WWDC 2017 的落幕，一大批新的技术(像 ARKit、Core ML、Core NFC 等等……)开始逐渐为开发者所知。开发者们又有了新的玩具可以玩一阵子了~</p>
+<p>这篇文章就单独拿 Core NFC 来说吧，毕竟它和我们的生活紧密相关。</p>
 <a id="more"></a>
-<h3 id="前提："><a href="#前提：" class="headerlink" title="前提："></a>前提：</h3><p>你需要设置好你本地的计算机与远程代码仓库的SSH连接。</p>
-<h3 id="步奏："><a href="#步奏：" class="headerlink" title="步奏："></a>步奏：</h3><ul>
-<li>你需要先在<code>github</code>或者其他的<code>git</code>托管网站<code>fork</code>一份别人的代码到自己的仓库，然后<code>clone</code>到本地。  </li>
-<li>添加原作者的远程分支。用以下命令即可添加：  </li>
+<blockquote>
+<p>注意：浏览本文中的部分图片需要科学上网。</p>
+</blockquote>
+<p>这次苹果爸爸只开始开放了 NFC 的读取权限，所以想拿 iPhone 当公交卡的同学，可能又要伤心了。但是拿 iPhone 来当个读卡器什么的，还是能玩一玩的~</p>
+<blockquote>
+<p>然鹅，只有那些拥有 iOS 11 系统的 iPhone 7/7P 的同学，才能拥有这些尊贵的特权。</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/1688625-0962d5881300e923.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000" alt="NFC"></p>
+<p>这次放出的 Core NFC 可以说是非常的轻量了，使用起来简直不能再简单一点。上图是 WWDC 上苹果提供的技术细分图，可以说基本涵盖了所有的格式。可以实现检测 NFC 标签 (NFC tags) 并读取包含 NDEF(NFC Data Exchange Format) 的数据。</p>
+<h1 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>在开发者后台给你的 App ID 添加 NFC 读取权限。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add author git@XXX.git</span><br></pre></td></tr></table></figure>
-<p>然后运行<code>git remote -v</code></p>
-<p>你会发现有你的远程分支和原作者的远程分支：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">author	git@xxx.git (fetch)</span><br><span class="line">author	git@xxx.git (push)</span><br><span class="line">origin	git@xxx.git (fetch)</span><br><span class="line">origin	git@xxx.git (push)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.stack.imgur.com/ENL6P.png" alt="step 1"></p>
 <ul>
-<li>把原作者最新的更改拉到本地：   </li>
+<li>在 Info.plist 里添加如下信息，用来提示用户获取设备的 NFC 读取权限。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch author</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;NFCReaderUsageDescription&lt;/key&gt;</span><br><span class="line">&lt;string&gt;some description...&lt;/string&gt;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>提交之前你自己对代码所做的更改，要不然无法执行下一步骤。</li>
+<li>在 entitlements 文件里添加如下信息。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;something changed&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;com.apple.developer.nfc.readersession.formats&lt;/key&gt;</span><br><span class="line">    &lt;array&gt;</span><br><span class="line">        &lt;string&gt;NDEF&lt;/string&gt;</span><br><span class="line">    &lt;/array&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="Objective-c"><a href="#Objective-c" class="headerlink" title="Objective-c"></a>Objective-c</h3><ul>
+<li>导入 CoreNFC 头文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;CoreNFC/CoreNFC.h&gt;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>把原作者代码与自己本地代码合并：</li>
+<li>设置代理</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge author/master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@interface YourViewController : UIViewController &lt;NFCNDEFReaderSessionDelegate&gt;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>如果没有冲突，<code>push</code>本地仓库到自己远程的<code>fork</code>仓库。如果有冲突，解决冲突之后，再执行<code>push</code>操作。</li>
+<li>在 .m 中实现如下代码</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>至此，所有的操作都已经完成。如果你觉得自己的代码值得贡献，可以<code>pull request</code>给原作者。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line">    NFCNDEFReaderSession *session = [[NFCNDEFReaderSession alloc] initWithDelegate:<span class="keyword">self</span> queue:dispatch_queue_create(<span class="literal">NULL</span>, DISPATCH_QUEUE_CONCURRENT) invalidateAfterFirstRead:<span class="literal">NO</span>];</span><br><span class="line">    [session beginSession];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)readerSession:(nonnull NFCNDEFReaderSession *)session didDetectNDEFs:(nonnull <span class="built_in">NSArray</span>&lt;NFCNDEFMessage *&gt; *)messages &#123;</span><br><span class="line">    <span class="keyword">for</span> (NFCNDEFMessage *message <span class="keyword">in</span> messages) &#123;</span><br><span class="line">        <span class="keyword">for</span> (NFCNDEFPayload *payload <span class="keyword">in</span> message.records) &#123;</span><br><span class="line">            <span class="built_in">NSLog</span>(<span class="string">@"Payload data:%@"</span>,payload.payload);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;        </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)readerSession:(NFCNDEFReaderSession *)session didInvalidateWithError:(<span class="built_in">NSError</span> *)error&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"%@"</span>,error);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>你可以用如下方法停止 session</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[session invalidateSession];</span><br></pre></td></tr></table></figure>
+<h3 id="Swift"><a href="#Swift" class="headerlink" title="Swift"></a>Swift</h3><ul>
+<li>导入 CoreNFC</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> CoreNFC</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置代理</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YourViewController</span>: <span class="title">UIViewController</span>, <span class="title">NFCNDEFReaderSessionDelegate</span></span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>实现如下代码</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">let</span> session = <span class="type">NFCNDEFReaderSession</span>(delegate: <span class="keyword">self</span>,</span><br><span class="line">                      queue: <span class="type">DispatchQueue</span>(label: <span class="string">"queueName"</span>, attributes: .concurrent), invalidateAfterFirstRead: <span class="literal">false</span>)</span><br><span class="line">        session.begin()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">readerSession</span><span class="params">(<span class="number">_</span> session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage])</span></span> &#123;</span><br><span class="line">    <span class="keyword">for</span> message <span class="keyword">in</span> messages &#123;</span><br><span class="line">    <span class="keyword">for</span> record <span class="keyword">in</span> message.records &#123;</span><br><span class="line">      <span class="built_in">print</span>(record.payload)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">readerSession</span><span class="params">(<span class="number">_</span> session: NFCNDEFReaderSession, didInvalidateWithError error: Error)</span></span> &#123;</span><br><span class="line">        <span class="built_in">print</span>(error.localizedDescription)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>你可以用如下方法停止 session</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.invalidate()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：每个 session 的扫描时间最多60s，如果超时需要再次开启 session。</p>
+</blockquote>
+<p>以上，就是最简单的代码实现。</p>
+<p>如果不出意外的话，编译并运行刚刚的代码，在 App 启动的时候，会出现如下场景…</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1196804-937b3d5dcb2237bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="launch"></p>
+<p>恭喜！你的第一个 NFC Demo 已经完成，快用你的卡片试一下吧！</p>
 
       
     </div>
@@ -453,8 +495,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/07/23/MapAPI/" rel="next" title="系统地图API位置提示搜索">
-                <i class="fa fa-chevron-left"></i> 系统地图API位置提示搜索
+              <a href="/2017/04/20/duoshuo-bye/" rel="next" title="多说，不说">
+                <i class="fa fa-chevron-left"></i> 多说，不说
               </a>
             
           </div>
@@ -462,10 +504,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/09/16/DESIGNATED_INITIALIZER/" rel="prev" title="指定初始化方法并使系统初始化方法无效">
-                指定初始化方法并使系统初始化方法无效 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -657,7 +695,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前提："><span class="nav-number">1.</span> <span class="nav-text">前提：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步奏："><span class="nav-number">2.</span> <span class="nav-text">步奏：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#实现步骤"><span class="nav-number">1.</span> <span class="nav-text">实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">1.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码实现"><span class="nav-number">1.2.</span> <span class="nav-text">代码实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Objective-c"><span class="nav-number">1.2.1.</span> <span class="nav-text">Objective-c</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Swift"><span class="nav-number">1.2.2.</span> <span class="nav-text">Swift</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -824,9 +862,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://xiaolei0808.com/2015/08/12/GitFork/';
-          this.page.identifier = '2015/08/12/GitFork/';
-          this.page.title = '与原作者同步Fork代码仓库';
+          this.page.url = 'http://xiaolei0808.com/2017/06/22/CoreNFC/';
+          this.page.identifier = '2017/06/22/CoreNFC/';
+          this.page.title = 'Core NFC 初体验';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://xiaolei0808.disqus.com/embed.js';
